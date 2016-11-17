@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ASWP/JZWallPaperMainViewController.m"
+            timestampString = "501100789.591059"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__44-[JZWallPaperMainViewController viewDidLoad]_block_invoke"
+                  moduleName = "ASWP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fincher/Desktop/Fincher/Develop/Mac/ASWP-for-macOS/ASWP/ASWP/JZWallPaperMainViewController.m"
+                  timestampString = "501100797.547324"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "73">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__44-[JZWallPaperMainViewController viewDidLoad]_block_invoke_2"
+                  moduleName = "ASWP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fincher/Desktop/Fincher/Develop/Mac/ASWP-for-macOS/ASWP/ASWP/JZWallPaperMainViewController.m"
+                  timestampString = "501100797.549892"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -7,6 +7,7 @@
 //
 
 #import "JZWallPaperMainViewController.h"
+#import "JZASDataManager.h"
 
 @interface JZWallPaperMainViewController ()
 
@@ -17,6 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
+    
+    [[JZASDataManager sharedManager] getDataFromASWithResultSuccess:^(NSDictionary *data)
+    {
+        NSLog(@"%@",data);
+        
+    } failure:^(NSError *error){}];
 }
 
 @end
