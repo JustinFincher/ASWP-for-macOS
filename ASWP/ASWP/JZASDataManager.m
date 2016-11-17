@@ -67,7 +67,12 @@
                 for (NSTextCheckingResult* match in matches)
                 {
                     NSString *url = [contentEncoded substringWithRange:[match rangeAtIndex:2]];
-                    NSLog(@"%@",url);
+                    JZASArtworkModel *newArtwork = [[JZASArtworkModel alloc] init];
+                    newArtwork.artworkLink = [NSURL URLWithString:url];
+                    newArtwork.artworkTitle = title;
+                    newArtwork.artworkPubDate = pubDate;
+                    newArtwork.artworkDescription = description;
+                    [artworks addObject:newArtwork];
                 }
             }
             

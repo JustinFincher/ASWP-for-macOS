@@ -18,6 +18,8 @@
 		0D3918C11DDE23BC00CF0313 /* JZASDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3918C01DDE23BC00CF0313 /* JZASDataManager.m */; };
 		0D3918C51DDE244B00CF0313 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3918C41DDE244B00CF0313 /* XMLDictionary.m */; };
 		0D3918C81DDE35CD00CF0313 /* JZASArtworkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3918C71DDE35CD00CF0313 /* JZASArtworkModel.m */; };
+		0D3918CC1DDE422400CF0313 /* JZWallPaperCollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3918CA1DDE422400CF0313 /* JZWallPaperCollectionViewItem.m */; };
+		0D3918CD1DDE422400CF0313 /* JZWallPaperCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D3918CB1DDE422400CF0313 /* JZWallPaperCollectionViewItem.xib */; };
 		54BB17C42E196A773705E2CC /* libPods-ASWP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F197F84F0EF14E3D9C74D0 /* libPods-ASWP.a */; };
 		6CB73173FEF5EB0CEA043942 /* libPods-ASWPUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CDEC5865A49D80EFF8E315 /* libPods-ASWPUITests.a */; };
 		FECE81AF5BE77D4CCBAE2F94 /* libPods-ASWPTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E3FAF746D248EA54D66160 /* libPods-ASWPTests.a */; };
@@ -64,6 +66,9 @@
 		0D3918C41DDE244B00CF0313 /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
 		0D3918C61DDE35CD00CF0313 /* JZASArtworkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZASArtworkModel.h; sourceTree = "<group>"; };
 		0D3918C71DDE35CD00CF0313 /* JZASArtworkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZASArtworkModel.m; sourceTree = "<group>"; };
+		0D3918C91DDE422400CF0313 /* JZWallPaperCollectionViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZWallPaperCollectionViewItem.h; sourceTree = "<group>"; };
+		0D3918CA1DDE422400CF0313 /* JZWallPaperCollectionViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZWallPaperCollectionViewItem.m; sourceTree = "<group>"; };
+		0D3918CB1DDE422400CF0313 /* JZWallPaperCollectionViewItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JZWallPaperCollectionViewItem.xib; sourceTree = "<group>"; };
 		0D8742C47D615CE9FC17531D /* Pods-ASWPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASWPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASWPTests/Pods-ASWPTests.debug.xcconfig"; sourceTree = "<group>"; };
 		16D93B27203E75306598E07F /* Pods-ASWP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASWP.release.xcconfig"; path = "Pods/Target Support Files/Pods-ASWP/Pods-ASWP.release.xcconfig"; sourceTree = "<group>"; };
 		2F31D0009AB8E1009442A3BA /* Pods-ASWP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASWP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASWP/Pods-ASWP.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +138,7 @@
 				0D39188C1DDE0E0600CF0313 /* AppDelegate.m */,
 				0D3918931DDE0E0600CF0313 /* MainMenu.xib */,
 				0D3918C21DDE23C200CF0313 /* Data */,
+				0D3918CE1DDE422700CF0313 /* View */,
 				0D3918BE1DDE238500CF0313 /* Controllers */,
 				0D3918911DDE0E0600CF0313 /* Assets.xcassets */,
 				0D3918961DDE0E0600CF0313 /* Info.plist */,
@@ -188,6 +194,16 @@
 				0D3918C71DDE35CD00CF0313 /* JZASArtworkModel.m */,
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		0D3918CE1DDE422700CF0313 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0D3918C91DDE422400CF0313 /* JZWallPaperCollectionViewItem.h */,
+				0D3918CA1DDE422400CF0313 /* JZWallPaperCollectionViewItem.m */,
+				0D3918CB1DDE422400CF0313 /* JZWallPaperCollectionViewItem.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		70223849FE4F4794C3C90FEA /* Frameworks */ = {
@@ -336,6 +352,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D3918CD1DDE422400CF0313 /* JZWallPaperCollectionViewItem.xib in Resources */,
 				0D3918BD1DDE0EF900CF0313 /* JZWallPaperMainViewController.xib in Resources */,
 				0D3918921DDE0E0600CF0313 /* Assets.xcassets in Resources */,
 				0D3918951DDE0E0600CF0313 /* MainMenu.xib in Resources */,
@@ -501,6 +518,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D3918CC1DDE422400CF0313 /* JZWallPaperCollectionViewItem.m in Sources */,
 				0D3918C51DDE244B00CF0313 /* XMLDictionary.m in Sources */,
 				0D3918901DDE0E0600CF0313 /* main.m in Sources */,
 				0D3918C81DDE35CD00CF0313 /* JZASArtworkModel.m in Sources */,
