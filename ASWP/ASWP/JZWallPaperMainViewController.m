@@ -19,9 +19,8 @@
     [super viewDidLoad];
     // Do view setup here.
     
-    [[JZASDataManager sharedManager] getDataFromASWithResultSuccess:^(NSDictionary *data)
+    [[JZASDataManager sharedManager] getDataFromASWithResultSuccess:^(NSMutableArray *array)
     {
-        NSLog(@"%@",data);
         
     } failure:^(NSError *error){}];
 }

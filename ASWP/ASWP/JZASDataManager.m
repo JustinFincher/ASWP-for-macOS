@@ -8,6 +8,12 @@
 
 #import "JZASDataManager.h"
 
+@interface JZASDataManager()
+
+@property (nonatomic,strong) NSDateFormatter *dateFormatter;
+@property (nonatomic,strong) NSRegularExpression *artworkUrlRegex;
+
+@end
 @implementation JZASDataManager
 
 
@@ -25,7 +31,11 @@
 - (id)init {
     if (self = [super init])
     {
-        
+        self.dateFormatter = [[NSDateFormatter alloc] init];
+        [self.dateFormatter setDateFormat:@"EE, d LLLL yyyy HH:mm:ss Z"];
+        NSError  *error = nil;
+        NSString *pattern = @"<img alt=\"(.*?)\" src=\"(.*?)\" />";
+        self.artworkUrlRegex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:&error];
     }
     return self;
 }
@@ -34,8 +44,8 @@
     // Should never be called, but just here for clarity really.
 }
 
-- (void)getDataFromASWithResultSuccess:(void (^)(NSDictionary * data))finishBlock
-                               failure:(void (^)(NSError * error))errorBlock
+- (void)getDataFromASWithResultSuccess:(void (^)(NSMutableArray * array))finishBlock
+                               failure:(void (^)(NSError * error))errorBlock;
 {
     AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
     session.responseSerializer = [AFHTTPResponseSerializer serializer];
@@ -45,7 +55,23 @@
         NSDictionary * dict = [[XMLDictionaryParser sharedInstance] dictionaryWithData:responseObject];
         if (dict)
         {
-            finishBlock(dict);
+            NSArray *items = [[dict objectForKey:@"channel"] objectForKey:@"item"];
+            NSMutableArray *artworks = [NSMutableArray array];
+            for (NSDictionary *singlePostDict in items)
+            {
+                NSString *title = [singlePostDict objectForKey:@"title"];
+                NSString *description = [singlePostDict objectForKey:@"description"];
+                NSDate *pubDate = [self.dateFormatter dateFromString:[singlePostDict objectForKey:@"pubDate"]];
+                NSString *contentEncoded = [singlePostDict objectForKey:@"content:encoded"];
+                NSArray* matches = [self.artworkUrlRegex matchesInString:contentEncoded options:0 range: NSMakeRange(0, [contentEncoded length])];
+                for (NSTextCheckingResult* match in matches)
+                {
+                    NSString *url = [contentEncoded substringWithRange:[match rangeAtIndex:2]];
+                    NSLog(@"%@",url);
+                }
+            }
+            
+            finishBlock(artworks);
         }else
         {
             errorBlock([NSError errorWithDomain:@"com.JustZht.ASWP" code:0 userInfo:nil]);
@@ -54,4 +80,5 @@
         errorBlock(error);
     }];
 }
+
 @end

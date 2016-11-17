@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DateTools.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ASWP.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,22 +42,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>36A4FD42EAED07FB6CAC4E8282657B25</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6DB1C59E15E90A69BB768EAF54F891E5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8E4893C581E3F746F71C22D49992CEC9</key>
+		<key>B36F6D48026E14827529F787D63D61B8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BB3810B40FC4ED2C73B243F96F66D978</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>E44AE298D538F76278421193C97E79C6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F0A5215D58CAE3150B390E5C5A87A28A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

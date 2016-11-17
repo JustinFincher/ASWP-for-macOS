@@ -9,10 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
 #import "XMLDictionary.h"
+#import "JZASArtworkModel.h"
 
 @interface JZASDataManager : NSObject
 
 + (id)sharedManager;
-- (void)getDataFromASWithResultSuccess:(void (^)(NSDictionary * data))finishBlock
+- (void)getDataFromASWithResultSuccess:(void (^)(NSMutableArray * array))finishBlock
                                failure:(void (^)(NSError * error))errorBlock;
 @end
