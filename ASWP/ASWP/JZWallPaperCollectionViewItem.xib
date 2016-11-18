@@ -43,7 +43,7 @@
                             <rect key="frame" x="6" y="24" width="468" height="27"/>
                             <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Multiline Label" id="RBq-AV-30B">
                                 <font key="font" size="16" name="Avenir-Book"/>
-                                <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
                         </textField>
@@ -55,7 +55,7 @@
                             </constraints>
                             <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="21 hours ago" id="s5e-9v-8B5">
                                 <font key="font" size="8" name="Avenir-Heavy"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="0.86726776541095896" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
                         </textField>

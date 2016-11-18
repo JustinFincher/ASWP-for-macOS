@@ -31,6 +31,14 @@
     // Do view setup here.
     self.topVIsualEffectView.wantsLayer = YES;
     self.view.wantsLayer = YES;
+    [self.view.layer setBackgroundColor:[NSColor clearColor].CGColor];
+    self.wallpapersScrollView.wantsLayer = YES;
+    [self.wallpapersScrollView.layer setBackgroundColor:[NSColor clearColor].CGColor];
+    self.wallpapersCollectionView.wantsLayer = YES;
+    self.wallpapersCollectionView.backgroundColors = @[[NSColor clearColor]];
+//    [self.wallpapersCollectionView.layer setBackgroundColor:[NSColor clearColor].CGColor];
+    
+    
     [self.wallpapersCollectionView registerClass:[JZWallPaperCollectionViewItem class] forItemWithIdentifier:@"JZWallPaperCollectionViewItem"];
     [self.wallpapersCollectionView registerClass:[JZWallPaperCollectionHeaderView class] forSupplementaryViewOfKind:NSCollectionElementKindSectionHeader withIdentifier:@"JZWallPaperCollectionHeaderView"];
     self.wallpapersCollectionView.delegate = self;
@@ -56,28 +64,43 @@
 
 - (void)setDataSource:(NSMutableArray *)dataSource
 {
-    _dataSource = dataSource;
-    [self.wallpapersCollectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
     if (self.dataSource.count > 0)
     {
-        [NSAnimationContext beginGrouping];
-        [[NSAnimationContext currentContext] setDuration:2.0];
-        [[self.wallpapersCollectionView animator] scrollToItemsAtIndexPaths:[NSSet setWithObjects:[NSIndexPath indexPathForItem:0 inSection:0], nil] scrollPosition:NSCollectionViewScrollPositionTop];
-        [NSAnimationContext endGrouping];
+        [self.wallpapersCollectionView scrollToItemsAtIndexPaths:[NSSet setWithObjects:[NSIndexPath indexPathForItem:0 inSection:0], nil] scrollPosition:NSCollectionViewScrollPositionTop];
     }
+    _dataSource = dataSource;
+    [self.wallpapersCollectionView reloadData];
+    [self.wallpapersCollectionView setNeedsDisplay:YES];
 
 }
 - (IBAction)refreshButtonPressed:(id)sender
 {
     self.refreshButton.enabled = NO;
-    [[JZASDataManager sharedManager] getDataFromASWithResultSuccess:^(NSMutableArray *array)
-     {
-         [self setDataSource:array];
-         self.refreshButton.enabled = YES;
-     } failure:^(NSError *error)
-     {
-         self.refreshButton.enabled = YES;
-     }];
+    [NSAnimationContext beginGrouping];
+    [[NSAnimationContext currentContext] setDuration:0.3];
+    [[self.wallpapersCollectionView animator] setAlphaValue:0];
+    [[NSAnimationContext currentContext] setCompletionHandler:^
+    {
+        [[JZASDataManager sharedManager] getDataFromASWithResultSuccess:^(NSMutableArray *array)
+         {
+             [self setDataSource:array];
+             self.refreshButton.enabled = YES;
+             [NSAnimationContext beginGrouping];
+             [[NSAnimationContext currentContext] setDuration:0.3];
+             [[self.wallpapersCollectionView animator] setAlphaValue:1];
+             [NSAnimationContext endGrouping];
+         } failure:^(NSError *error)
+         {
+             self.refreshButton.enabled = YES;
+             [NSAnimationContext beginGrouping];
+             [[NSAnimationContext currentContext] setDuration:0.3];
+             [[self.wallpapersCollectionView animator] setAlphaValue:1];
+             [NSAnimationContext endGrouping];
+         }];
+    }];
+    [NSAnimationContext endGrouping];
+    
+
 }
 
 #pragma mark - NSCollectionViewDataSource

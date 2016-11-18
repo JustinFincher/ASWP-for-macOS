@@ -34,5 +34,18 @@
     // Should never be called, but just here for clarity really.
 }
 
-
+- (NSMutableArray *)currentScreens
+{
+    NSArray *screens = [NSScreen screens];
+    NSMutableArray *currentScreens = [NSMutableArray array];
+    for (int i = 0; i < screens.count; i ++)
+    {
+        NSScreen *screen = [screens objectAtIndex:i];
+        JZScreensModel *model = [[JZScreensModel alloc] init];
+        model.screen = screen;
+        model.screenDescription = [NSString stringWithFormat:@"Screen %d : %d×%d",i,(int)screen.frame.size.width,(int)screen.frame.size.height];
+        [currentScreens addObject:model];
+    }
+    return currentScreens;
+}
 @end

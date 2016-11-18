@@ -28,6 +28,7 @@
     itemButton.image = [NSImage imageNamed:@"StatusBarButtonImage"];
     itemButton.action = @selector(togglePopover:);
     self.popOver = [[NSPopover alloc] init];
+    self.popOver.behavior = NSPopoverBehaviorTransient;
     self.popOver.contentViewController = [[JZWallPaperMainViewController alloc] initWithNibName:@"JZWallPaperMainViewController" bundle:[NSBundle mainBundle]];
 }
 
@@ -43,6 +44,7 @@
 }
 - (void)showPopover:(id)sender
 {
+    [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
     [self.popOver showRelativeToRect:self.statusItem.button.bounds ofView:self.statusItem.button preferredEdge:NSMinYEdge];
 }
 - (void)closePopover:(id)sender

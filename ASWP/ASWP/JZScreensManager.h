@@ -8,15 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <AppKit/AppKit.h>
+#import "JZScreensModel.h"
 
 @interface JZScreensManager : NSObject
 + (id)sharedManager;
 - (NSMutableArray *)currentScreens;
 @end
 
-@interface JZScreensModel : NSObject
-
-@property (nonatomic,strong) NSString *screenDescription;
-@property (nonatomic,strong) NSScreen *screen;
-
-@end
