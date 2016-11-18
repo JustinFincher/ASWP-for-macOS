@@ -20,6 +20,10 @@
 		0D3918C81DDE35CD00CF0313 /* JZASArtworkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3918C71DDE35CD00CF0313 /* JZASArtworkModel.m */; };
 		0D3918CC1DDE422400CF0313 /* JZWallPaperCollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3918CA1DDE422400CF0313 /* JZWallPaperCollectionViewItem.m */; };
 		0D3918CD1DDE422400CF0313 /* JZWallPaperCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D3918CB1DDE422400CF0313 /* JZWallPaperCollectionViewItem.xib */; };
+		0D3918D11DDEE15A00CF0313 /* JZWallPaperCollectionItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3918D01DDEE15A00CF0313 /* JZWallPaperCollectionItemView.m */; };
+		0D3918D31DDF2E0B00CF0313 /* JZWallPaperCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D3918D21DDF2E0B00CF0313 /* JZWallPaperCollectionHeaderView.xib */; };
+		0D3918D61DDF2E3E00CF0313 /* JZWallPaperCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3918D51DDF2E3E00CF0313 /* JZWallPaperCollectionHeaderView.m */; };
+		0D3918D91DDF3E0C00CF0313 /* JZScreensManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3918D81DDF3E0C00CF0313 /* JZScreensManager.m */; };
 		54BB17C42E196A773705E2CC /* libPods-ASWP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F197F84F0EF14E3D9C74D0 /* libPods-ASWP.a */; };
 		6CB73173FEF5EB0CEA043942 /* libPods-ASWPUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CDEC5865A49D80EFF8E315 /* libPods-ASWPUITests.a */; };
 		FECE81AF5BE77D4CCBAE2F94 /* libPods-ASWPTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E3FAF746D248EA54D66160 /* libPods-ASWPTests.a */; };
@@ -69,6 +73,13 @@
 		0D3918C91DDE422400CF0313 /* JZWallPaperCollectionViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZWallPaperCollectionViewItem.h; sourceTree = "<group>"; };
 		0D3918CA1DDE422400CF0313 /* JZWallPaperCollectionViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZWallPaperCollectionViewItem.m; sourceTree = "<group>"; };
 		0D3918CB1DDE422400CF0313 /* JZWallPaperCollectionViewItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JZWallPaperCollectionViewItem.xib; sourceTree = "<group>"; };
+		0D3918CF1DDEE15A00CF0313 /* JZWallPaperCollectionItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZWallPaperCollectionItemView.h; sourceTree = "<group>"; };
+		0D3918D01DDEE15A00CF0313 /* JZWallPaperCollectionItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZWallPaperCollectionItemView.m; sourceTree = "<group>"; };
+		0D3918D21DDF2E0B00CF0313 /* JZWallPaperCollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JZWallPaperCollectionHeaderView.xib; sourceTree = "<group>"; };
+		0D3918D41DDF2E3E00CF0313 /* JZWallPaperCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZWallPaperCollectionHeaderView.h; sourceTree = "<group>"; };
+		0D3918D51DDF2E3E00CF0313 /* JZWallPaperCollectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZWallPaperCollectionHeaderView.m; sourceTree = "<group>"; };
+		0D3918D71DDF3E0C00CF0313 /* JZScreensManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZScreensManager.h; sourceTree = "<group>"; };
+		0D3918D81DDF3E0C00CF0313 /* JZScreensManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZScreensManager.m; sourceTree = "<group>"; };
 		0D8742C47D615CE9FC17531D /* Pods-ASWPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASWPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASWPTests/Pods-ASWPTests.debug.xcconfig"; sourceTree = "<group>"; };
 		16D93B27203E75306598E07F /* Pods-ASWP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASWP.release.xcconfig"; path = "Pods/Target Support Files/Pods-ASWP/Pods-ASWP.release.xcconfig"; sourceTree = "<group>"; };
 		2F31D0009AB8E1009442A3BA /* Pods-ASWP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASWP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASWP/Pods-ASWP.debug.xcconfig"; sourceTree = "<group>"; };
@@ -179,6 +190,9 @@
 				0D3918B91DDE0EF900CF0313 /* JZWallPaperMainViewController.h */,
 				0D3918BA1DDE0EF900CF0313 /* JZWallPaperMainViewController.m */,
 				0D3918BB1DDE0EF900CF0313 /* JZWallPaperMainViewController.xib */,
+				0D3918C91DDE422400CF0313 /* JZWallPaperCollectionViewItem.h */,
+				0D3918CA1DDE422400CF0313 /* JZWallPaperCollectionViewItem.m */,
+				0D3918CB1DDE422400CF0313 /* JZWallPaperCollectionViewItem.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -192,6 +206,8 @@
 				0D3918C01DDE23BC00CF0313 /* JZASDataManager.m */,
 				0D3918C61DDE35CD00CF0313 /* JZASArtworkModel.h */,
 				0D3918C71DDE35CD00CF0313 /* JZASArtworkModel.m */,
+				0D3918D71DDF3E0C00CF0313 /* JZScreensManager.h */,
+				0D3918D81DDF3E0C00CF0313 /* JZScreensManager.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -199,9 +215,11 @@
 		0D3918CE1DDE422700CF0313 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0D3918C91DDE422400CF0313 /* JZWallPaperCollectionViewItem.h */,
-				0D3918CA1DDE422400CF0313 /* JZWallPaperCollectionViewItem.m */,
-				0D3918CB1DDE422400CF0313 /* JZWallPaperCollectionViewItem.xib */,
+				0D3918CF1DDEE15A00CF0313 /* JZWallPaperCollectionItemView.h */,
+				0D3918D01DDEE15A00CF0313 /* JZWallPaperCollectionItemView.m */,
+				0D3918D41DDF2E3E00CF0313 /* JZWallPaperCollectionHeaderView.h */,
+				0D3918D51DDF2E3E00CF0313 /* JZWallPaperCollectionHeaderView.m */,
+				0D3918D21DDF2E0B00CF0313 /* JZWallPaperCollectionHeaderView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -352,6 +370,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D3918D31DDF2E0B00CF0313 /* JZWallPaperCollectionHeaderView.xib in Resources */,
 				0D3918CD1DDE422400CF0313 /* JZWallPaperCollectionViewItem.xib in Resources */,
 				0D3918BD1DDE0EF900CF0313 /* JZWallPaperMainViewController.xib in Resources */,
 				0D3918921DDE0E0600CF0313 /* Assets.xcassets in Resources */,
@@ -519,9 +538,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D3918CC1DDE422400CF0313 /* JZWallPaperCollectionViewItem.m in Sources */,
+				0D3918D61DDF2E3E00CF0313 /* JZWallPaperCollectionHeaderView.m in Sources */,
 				0D3918C51DDE244B00CF0313 /* XMLDictionary.m in Sources */,
 				0D3918901DDE0E0600CF0313 /* main.m in Sources */,
 				0D3918C81DDE35CD00CF0313 /* JZASArtworkModel.m in Sources */,
+				0D3918D91DDF3E0C00CF0313 /* JZScreensManager.m in Sources */,
+				0D3918D11DDEE15A00CF0313 /* JZWallPaperCollectionItemView.m in Sources */,
 				0D3918C11DDE23BC00CF0313 /* JZASDataManager.m in Sources */,
 				0D39188D1DDE0E0600CF0313 /* AppDelegate.m in Sources */,
 				0D3918BC1DDE0EF900CF0313 /* JZWallPaperMainViewController.m in Sources */,

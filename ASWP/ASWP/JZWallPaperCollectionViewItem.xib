@@ -9,26 +9,80 @@
         <customObject id="-2" userLabel="File's Owner" customClass="JZWallPaperCollectionViewItem">
             <connections>
                 <outlet property="artworkImageView" destination="VEX-aE-Hjg" id="bvn-li-ttC"/>
+                <outlet property="blurView" destination="tgT-dI-XoR" id="VoF-So-OyI"/>
+                <outlet property="imageContainerView" destination="ktW-u0-9fA" id="YTh-uX-WhJ"/>
+                <outlet property="loadingIndicator" destination="BXF-1q-y3l" id="ZvQ-WH-2TW"/>
+                <outlet property="timeLabel" destination="v7R-bF-KHb" id="pgP-Uu-xkj"/>
+                <outlet property="titleLabel" destination="Xsd-Iw-e0K" id="FEe-8l-fWK"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+        <customView id="Hz6-mo-xeY" customClass="JZWallPaperCollectionItemView">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="51"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VEX-aE-Hjg">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="x02-x3-X0l"/>
-                </imageView>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="ktW-u0-9fA">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="51"/>
+                    <subviews>
+                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VEX-aE-Hjg">
+                            <rect key="frame" x="0.0" y="0.0" width="480" height="51"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="x02-x3-X0l"/>
+                        </imageView>
+                    </subviews>
+                </customView>
+                <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="BXF-1q-y3l">
+                    <rect key="frame" x="232" y="18" width="16" height="16"/>
+                </progressIndicator>
+                <visualEffectView blendingMode="withinWindow" material="appearanceBased" state="active" translatesAutoresizingMaskIntoConstraints="NO" id="tgT-dI-XoR">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="51"/>
+                    <subviews>
+                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Xsd-Iw-e0K">
+                            <rect key="frame" x="6" y="24" width="468" height="27"/>
+                            <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Multiline Label" id="RBq-AV-30B">
+                                <font key="font" size="16" name="Avenir-Book"/>
+                                <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="v7R-bF-KHb">
+                            <rect key="frame" x="390" y="0.0" width="84" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="rqM-6t-iCf"/>
+                                <constraint firstAttribute="width" constant="80" id="yZ8-yn-aR6"/>
+                            </constraints>
+                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="21 hours ago" id="s5e-9v-8B5">
+                                <font key="font" size="8" name="Avenir-Heavy"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.86726776541095896" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="v7R-bF-KHb" secondAttribute="trailing" constant="8" id="5QO-C3-HU0"/>
+                        <constraint firstAttribute="bottom" secondItem="v7R-bF-KHb" secondAttribute="bottom" id="9sy-BY-d0l"/>
+                        <constraint firstAttribute="trailing" secondItem="Xsd-Iw-e0K" secondAttribute="trailing" constant="8" id="DjP-CQ-YNE"/>
+                        <constraint firstItem="Xsd-Iw-e0K" firstAttribute="leading" secondItem="tgT-dI-XoR" secondAttribute="leading" constant="8" id="gar-lH-aX3"/>
+                        <constraint firstItem="v7R-bF-KHb" firstAttribute="top" secondItem="Xsd-Iw-e0K" secondAttribute="bottom" id="gqE-TB-maC"/>
+                        <constraint firstItem="Xsd-Iw-e0K" firstAttribute="top" secondItem="tgT-dI-XoR" secondAttribute="top" id="qrm-Ae-z7T"/>
+                    </constraints>
+                </visualEffectView>
             </subviews>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="VEX-aE-Hjg" secondAttribute="trailing" id="GJM-lt-daa"/>
-                <constraint firstItem="VEX-aE-Hjg" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="S6b-r7-gSy"/>
-                <constraint firstAttribute="bottom" secondItem="VEX-aE-Hjg" secondAttribute="bottom" id="XL6-ZE-soE"/>
-                <constraint firstItem="VEX-aE-Hjg" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="z7Y-QP-bJc"/>
+                <constraint firstItem="ktW-u0-9fA" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="5qv-ef-yVs"/>
+                <constraint firstItem="BXF-1q-y3l" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="CSO-JE-weo"/>
+                <constraint firstAttribute="trailing" secondItem="tgT-dI-XoR" secondAttribute="trailing" id="dk1-0H-MUb"/>
+                <constraint firstItem="ktW-u0-9fA" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="goa-0b-BUN"/>
+                <constraint firstAttribute="trailing" secondItem="ktW-u0-9fA" secondAttribute="trailing" id="hVd-Bp-fkJ"/>
+                <constraint firstAttribute="bottom" secondItem="tgT-dI-XoR" secondAttribute="bottom" id="hb6-ut-va8"/>
+                <constraint firstItem="BXF-1q-y3l" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="kKP-oE-W4b"/>
+                <constraint firstItem="tgT-dI-XoR" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="vHf-X9-BJ1"/>
+                <constraint firstAttribute="bottom" secondItem="ktW-u0-9fA" secondAttribute="bottom" id="xk1-Xp-nki"/>
+                <constraint firstItem="tgT-dI-XoR" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="yPM-hq-uZm"/>
             </constraints>
+            <point key="canvasLocation" x="139" y="168.5"/>
         </customView>
     </objects>
 </document>

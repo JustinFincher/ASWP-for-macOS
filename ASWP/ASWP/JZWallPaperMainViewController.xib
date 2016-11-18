@@ -8,8 +8,11 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="JZWallPaperMainViewController">
             <connections>
+                <outlet property="refreshButton" destination="3SA-bf-FsJ" id="5aa-ri-gld"/>
+                <outlet property="topVIsualEffectView" destination="wrv-Ju-ExI" id="ixe-dX-dUz"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
                 <outlet property="wallpapersCollectionView" destination="Hs7-FE-QJu" id="V6a-h7-JXC"/>
+                <outlet property="wallpapersScrollView" destination="sN5-nk-2hY" id="cuB-4c-DHU"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
@@ -18,22 +21,23 @@
             <rect key="frame" x="0.0" y="0.0" width="360" height="450"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sN5-nk-2hY">
+                <scrollView wantsLayer="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sN5-nk-2hY">
                     <rect key="frame" x="0.0" y="0.0" width="360" height="450"/>
-                    <clipView key="contentView" copiesOnScroll="NO" id="72A-ve-zOF">
+                    <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="72A-ve-zOF">
                         <rect key="frame" x="0.0" y="0.0" width="360" height="450"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView id="Hs7-FE-QJu">
+                            <collectionView selectable="YES" id="Hs7-FE-QJu">
                                 <rect key="frame" x="0.0" y="0.0" width="360" height="450"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="7.5" minimumLineSpacing="10" id="ocS-Uf-rWq">
+                                <collectionViewFlowLayout key="collectionViewLayout" id="ocS-Uf-rWq">
                                     <size key="itemSize" width="115" height="115"/>
+                                    <size key="headerReferenceSize" width="0.0" height="100"/>
                                 </collectionViewFlowLayout>
                                 <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="0.85374365482233505" green="0.85374365482233505" blue="0.85374365482233505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.25323737157534248" colorSpace="custom" customColorSpace="sRGB"/>
                     </clipView>
                     <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="wAe-bN-Vs1">
                         <rect key="frame" x="-100" y="-100" width="0.0" height="16"/>
@@ -58,23 +62,38 @@ W A L L P A P E R S</string>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
                         </textField>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rUT-wS-b0D">
+                            <rect key="frame" x="328" y="38" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="1KB-wP-qU2"/>
+                                <constraint firstAttribute="width" constant="32" id="yne-M1-1kq"/>
+                            </constraints>
+                            <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="NSListViewTemplate" imagePosition="only" alignment="center" inset="2" id="6EX-OB-Y77">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3SA-bf-FsJ">
+                            <rect key="frame" x="328" y="6" width="32" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="NSRefreshFreestandingTemplate" imagePosition="only" alignment="center" inset="2" id="jlM-Yo-Jgb">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="refreshButtonPressed:" target="-2" id="EGJ-0o-j8A"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="height" constant="70" id="4Gf-Yk-9O7"/>
-                    </constraints>
-                </visualEffectView>
-                <visualEffectView appearanceType="vibrantDark" blendingMode="withinWindow" material="appearanceBased" state="active" translatesAutoresizingMaskIntoConstraints="NO" id="sXE-33-YNM">
-                    <rect key="frame" x="0.0" y="0.0" width="360" height="70"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="70" id="aYw-Y0-Kho"/>
+                        <constraint firstAttribute="trailing" secondItem="rUT-wS-b0D" secondAttribute="trailing" id="518-RB-zdE"/>
+                        <constraint firstItem="rUT-wS-b0D" firstAttribute="top" secondItem="wrv-Ju-ExI" secondAttribute="top" id="9To-o7-swc"/>
                     </constraints>
                 </visualEffectView>
             </subviews>
             <constraints>
                 <constraint firstItem="wrv-Ju-ExI" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="5tr-lj-XCc"/>
-                <constraint firstAttribute="bottom" secondItem="sXE-33-YNM" secondAttribute="bottom" id="605-yZ-hfo"/>
-                <constraint firstAttribute="trailing" secondItem="sXE-33-YNM" secondAttribute="trailing" id="D9X-mf-gFq"/>
-                <constraint firstItem="sXE-33-YNM" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="IeA-Q5-O6Z"/>
                 <constraint firstAttribute="trailing" secondItem="sN5-nk-2hY" secondAttribute="trailing" id="IpW-9k-KDB"/>
                 <constraint firstAttribute="trailing" secondItem="wrv-Ju-ExI" secondAttribute="trailing" id="JzB-hH-JBm"/>
                 <constraint firstItem="sN5-nk-2hY" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="VTC-ay-kWW"/>
@@ -84,4 +103,8 @@ W A L L P A P E R S</string>
             </constraints>
         </customView>
     </objects>
+    <resources>
+        <image name="NSListViewTemplate" width="14" height="10"/>
+        <image name="NSRefreshFreestandingTemplate" width="14" height="14"/>
+    </resources>
 </document>

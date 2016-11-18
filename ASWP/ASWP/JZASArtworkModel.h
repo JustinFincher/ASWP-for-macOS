@@ -13,6 +13,7 @@
 @property (nonatomic,strong) NSString *artworkTitle;
 @property (nonatomic,strong) NSString *artworkDescription;
 @property (nonatomic,strong) NSURL *artworkLink;
+@property (nonatomic,strong) NSURL *artworkImageLink;
 @property (nonatomic,strong) NSDate *artworkPubDate;
 
 @end

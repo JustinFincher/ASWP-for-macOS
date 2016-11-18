@@ -32,7 +32,9 @@
     if (self = [super init])
     {
         self.dateFormatter = [[NSDateFormatter alloc] init];
-        [self.dateFormatter setDateFormat:@"EE, d LLLL yyyy HH:mm:ss Z"];
+        [self.dateFormatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss ZZ"];
+        NSLocale *enUSPOSIXLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+        [self.dateFormatter setLocale:enUSPOSIXLocale];
         NSError  *error = nil;
         NSString *pattern = @"<img alt=\"(.*?)\" src=\"(.*?)\" />";
         self.artworkUrlRegex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:&error];
@@ -60,6 +62,7 @@
             for (NSDictionary *singlePostDict in items)
             {
                 NSString *title = [singlePostDict objectForKey:@"title"];
+                NSString *link = [singlePostDict objectForKey:@"link"];
                 NSString *description = [singlePostDict objectForKey:@"description"];
                 NSDate *pubDate = [self.dateFormatter dateFromString:[singlePostDict objectForKey:@"pubDate"]];
                 NSString *contentEncoded = [singlePostDict objectForKey:@"content:encoded"];
@@ -68,7 +71,8 @@
                 {
                     NSString *url = [contentEncoded substringWithRange:[match rangeAtIndex:2]];
                     JZASArtworkModel *newArtwork = [[JZASArtworkModel alloc] init];
-                    newArtwork.artworkLink = [NSURL URLWithString:url];
+                    newArtwork.artworkLink = [NSURL URLWithString:link];
+                    newArtwork.artworkImageLink = [NSURL URLWithString:url];
                     newArtwork.artworkTitle = title;
                     newArtwork.artworkPubDate = pubDate;
                     newArtwork.artworkDescription = description;
