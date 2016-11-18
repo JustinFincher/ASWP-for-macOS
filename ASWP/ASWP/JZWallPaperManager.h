@@ -19,4 +19,6 @@
 - (void)saveWallPaper:(NSImage *)image
       completeHandler:(void (^)(void))completion;
 
+- (void)clearAllCacheAndSaved;
+
 @end

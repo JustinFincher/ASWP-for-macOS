@@ -12,13 +12,15 @@
 #import "JZWallPaperManager.h"
 #import "JZScreensManager.h"
 #import <Quartz/Quartz.h>
+#import "JZWallPaperCollectionItemQuickScreenSetView.h"
 
-@interface JZWallPaperCollectionViewItem ()<JZWallPaperCollectionItemViewMouseDelegate>
+@interface JZWallPaperCollectionViewItem ()<JZWallPaperCollectionItemQuickScreenSetViewDelegate,JZWallPaperCollectionItemViewMouseDelegate>
 @property (weak) IBOutlet NSVisualEffectView *blurView;
 @property (strong,nonatomic) NSClickGestureRecognizer *titleClickGestureRecognizeer;
 @property (weak) IBOutlet NSView *imageContainerView;
 
 @property (weak) IBOutlet NSProgressIndicator *loadingIndicator;
+@property (weak) IBOutlet JZWallPaperCollectionItemQuickScreenSetView *quickScreenSetView;
 
 @end
 
@@ -35,6 +37,7 @@
     self.titleClickGestureRecognizeer.buttonMask = 0x1;
     [self.titleLabel addGestureRecognizer:self.titleClickGestureRecognizeer];
     ((JZWallPaperCollectionItemView *)(self.view)).mouseDelegate = self;
+    self.quickScreenSetView.delegate = self;
 }
 
 - (void)viewDidLoad {
@@ -122,6 +125,11 @@
     
     self.artworkImageView.frame = finalRect;
     
+}
+#pragma mark - JZWallPaperCollectionItemQuickScreenSetViewDelegate
+- (void)smashThatButtonWithScreen:(NSScreen *)screen
+{
+    [[JZWallPaperManager sharedManager] setWallPaper:self.artworkImageView.image WithScreen:screen completeHandler:^(void){}];
 }
 #pragma mark - JZWallPaperCollectionItemViewMouseDelegate
 - (void)mouseOutWithSender:(JZWallPaperCollectionItemView *)sender

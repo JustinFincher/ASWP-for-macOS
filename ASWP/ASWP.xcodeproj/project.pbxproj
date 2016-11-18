@@ -26,6 +26,7 @@
 		0D3918D91DDF3E0C00CF0313 /* JZScreensManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3918D81DDF3E0C00CF0313 /* JZScreensManager.m */; };
 		0D3918DC1DDF635600CF0313 /* JZScreensModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3918DB1DDF635600CF0313 /* JZScreensModel.m */; };
 		0D3918DF1DDF79AD00CF0313 /* JZWallPaperManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3918DE1DDF79AD00CF0313 /* JZWallPaperManager.m */; };
+		0D3918E21DDF951F00CF0313 /* JZWallPaperCollectionItemQuickScreenSetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3918E11DDF951F00CF0313 /* JZWallPaperCollectionItemQuickScreenSetView.m */; };
 		54BB17C42E196A773705E2CC /* libPods-ASWP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F197F84F0EF14E3D9C74D0 /* libPods-ASWP.a */; };
 		6CB73173FEF5EB0CEA043942 /* libPods-ASWPUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CDEC5865A49D80EFF8E315 /* libPods-ASWPUITests.a */; };
 		FECE81AF5BE77D4CCBAE2F94 /* libPods-ASWPTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E3FAF746D248EA54D66160 /* libPods-ASWPTests.a */; };
@@ -86,6 +87,8 @@
 		0D3918DB1DDF635600CF0313 /* JZScreensModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZScreensModel.m; sourceTree = "<group>"; };
 		0D3918DD1DDF79AD00CF0313 /* JZWallPaperManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZWallPaperManager.h; sourceTree = "<group>"; };
 		0D3918DE1DDF79AD00CF0313 /* JZWallPaperManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZWallPaperManager.m; sourceTree = "<group>"; };
+		0D3918E01DDF951F00CF0313 /* JZWallPaperCollectionItemQuickScreenSetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZWallPaperCollectionItemQuickScreenSetView.h; sourceTree = "<group>"; };
+		0D3918E11DDF951F00CF0313 /* JZWallPaperCollectionItemQuickScreenSetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZWallPaperCollectionItemQuickScreenSetView.m; sourceTree = "<group>"; };
 		0D8742C47D615CE9FC17531D /* Pods-ASWPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASWPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASWPTests/Pods-ASWPTests.debug.xcconfig"; sourceTree = "<group>"; };
 		16D93B27203E75306598E07F /* Pods-ASWP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASWP.release.xcconfig"; path = "Pods/Target Support Files/Pods-ASWP/Pods-ASWP.release.xcconfig"; sourceTree = "<group>"; };
 		2F31D0009AB8E1009442A3BA /* Pods-ASWP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASWP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASWP/Pods-ASWP.debug.xcconfig"; sourceTree = "<group>"; };
@@ -230,6 +233,8 @@
 				0D3918D41DDF2E3E00CF0313 /* JZWallPaperCollectionHeaderView.h */,
 				0D3918D51DDF2E3E00CF0313 /* JZWallPaperCollectionHeaderView.m */,
 				0D3918D21DDF2E0B00CF0313 /* JZWallPaperCollectionHeaderView.xib */,
+				0D3918E01DDF951F00CF0313 /* JZWallPaperCollectionItemQuickScreenSetView.h */,
+				0D3918E11DDF951F00CF0313 /* JZWallPaperCollectionItemQuickScreenSetView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -559,6 +564,7 @@
 				0D39188D1DDE0E0600CF0313 /* AppDelegate.m in Sources */,
 				0D3918DF1DDF79AD00CF0313 /* JZWallPaperManager.m in Sources */,
 				0D3918BC1DDE0EF900CF0313 /* JZWallPaperMainViewController.m in Sources */,
+				0D3918E21DDF951F00CF0313 /* JZWallPaperCollectionItemQuickScreenSetView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

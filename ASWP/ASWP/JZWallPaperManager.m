@@ -7,7 +7,7 @@
 //
 
 #import "JZWallPaperManager.h"
-
+#import <SDWebImage/SDImageCache.h>
 @implementation JZWallPaperManager
 
 
@@ -100,5 +100,41 @@
             
         }
     }];
+}
+- (void)clearAllCacheAndSaved
+{
+    [[SDImageCache sharedImageCache] clearDiskOnCompletion:^(void){}];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+    NSDirectoryEnumerator *enumerator = [fileManager enumeratorAtURL:[NSURL fileURLWithPath:cachePath]
+                                          includingPropertiesForKeys:@[NSURLNameKey, NSURLIsDirectoryKey]
+                                                             options:NSDirectoryEnumerationSkipsHiddenFiles
+                                                        errorHandler:^BOOL(NSURL *url, NSError *error)
+    {
+        if (error) {
+            NSLog(@"[Error] %@ (%@)", error, url);
+            return NO;
+        }
+        
+        return YES;
+    }];
+    for (NSURL *fileURL in enumerator)
+    {
+        NSString *filename;
+        [fileURL getResourceValue:&filename forKey:NSURLNameKey error:nil];
+        
+        NSNumber *isDirectory;
+        [fileURL getResourceValue:&isDirectory forKey:NSURLIsDirectoryKey error:nil];
+        
+        NSError *error = nil;
+        if (![isDirectory boolValue] && [[fileURL pathExtension] isEqualToString:@"jpeg"])
+        {
+            if (![fileManager removeItemAtPath:[fileURL path] error:&error])
+            {
+                NSLog(@"[Error] %@ (%@)", error, [fileURL path]);
+            }
+        }
+    }
+    
 }
 @end

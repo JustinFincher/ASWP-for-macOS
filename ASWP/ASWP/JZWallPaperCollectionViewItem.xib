@@ -12,6 +12,7 @@
                 <outlet property="blurView" destination="tgT-dI-XoR" id="VoF-So-OyI"/>
                 <outlet property="imageContainerView" destination="ktW-u0-9fA" id="YTh-uX-WhJ"/>
                 <outlet property="loadingIndicator" destination="BXF-1q-y3l" id="ZvQ-WH-2TW"/>
+                <outlet property="quickScreenSetView" destination="Hfc-I1-nf2" id="9fh-l7-OS7"/>
                 <outlet property="timeLabel" destination="v7R-bF-KHb" id="pgP-Uu-xkj"/>
                 <outlet property="titleLabel" destination="Xsd-Iw-e0K" id="FEe-8l-fWK"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
@@ -48,10 +49,10 @@
                             </textFieldCell>
                         </textField>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="v7R-bF-KHb">
-                            <rect key="frame" x="390" y="0.0" width="84" height="24"/>
+                            <rect key="frame" x="414" y="0.0" width="60" height="24"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="24" id="rqM-6t-iCf"/>
-                                <constraint firstAttribute="width" constant="80" id="yZ8-yn-aR6"/>
+                                <constraint firstAttribute="width" constant="56" id="yZ8-yn-aR6"/>
                             </constraints>
                             <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="21 hours ago" id="s5e-9v-8B5">
                                 <font key="font" size="8" name="Avenir-Heavy"/>
@@ -59,14 +60,23 @@
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
                         </textField>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="Hfc-I1-nf2" customClass="JZWallPaperCollectionItemQuickScreenSetView">
+                            <rect key="frame" x="0.0" y="0.0" width="416" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="ncd-YL-KA4"/>
+                            </constraints>
+                        </customView>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="v7R-bF-KHb" secondAttribute="trailing" constant="8" id="5QO-C3-HU0"/>
                         <constraint firstAttribute="bottom" secondItem="v7R-bF-KHb" secondAttribute="bottom" id="9sy-BY-d0l"/>
                         <constraint firstAttribute="trailing" secondItem="Xsd-Iw-e0K" secondAttribute="trailing" constant="8" id="DjP-CQ-YNE"/>
+                        <constraint firstItem="Hfc-I1-nf2" firstAttribute="leading" secondItem="tgT-dI-XoR" secondAttribute="leading" id="NO8-Be-P7c"/>
+                        <constraint firstAttribute="bottom" secondItem="Hfc-I1-nf2" secondAttribute="bottom" id="TO6-S1-74R"/>
                         <constraint firstItem="Xsd-Iw-e0K" firstAttribute="leading" secondItem="tgT-dI-XoR" secondAttribute="leading" constant="8" id="gar-lH-aX3"/>
                         <constraint firstItem="v7R-bF-KHb" firstAttribute="top" secondItem="Xsd-Iw-e0K" secondAttribute="bottom" id="gqE-TB-maC"/>
                         <constraint firstItem="Xsd-Iw-e0K" firstAttribute="top" secondItem="tgT-dI-XoR" secondAttribute="top" id="qrm-Ae-z7T"/>
+                        <constraint firstItem="v7R-bF-KHb" firstAttribute="leading" secondItem="Hfc-I1-nf2" secondAttribute="trailing" id="ydQ-Nj-ato"/>
                     </constraints>
                 </visualEffectView>
             </subviews>

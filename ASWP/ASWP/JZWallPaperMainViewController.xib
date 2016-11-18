@@ -9,6 +9,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="JZWallPaperMainViewController">
             <connections>
                 <outlet property="refreshButton" destination="3SA-bf-FsJ" id="5aa-ri-gld"/>
+                <outlet property="settingsButton" destination="rUT-wS-b0D" id="Sed-x5-1uT"/>
                 <outlet property="topVIsualEffectView" destination="wrv-Ju-ExI" id="ixe-dX-dUz"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
                 <outlet property="wallpapersCollectionView" destination="Hs7-FE-QJu" id="V6a-h7-JXC"/>
@@ -73,6 +74,9 @@ W A L L P A P E R S</string>
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
+                            <connections>
+                                <action selector="settingsButtonPressed:" target="-2" id="djJ-h5-Tk2"/>
+                            </connections>
                         </button>
                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3SA-bf-FsJ">
                             <rect key="frame" x="328" y="6" width="32" height="32"/>

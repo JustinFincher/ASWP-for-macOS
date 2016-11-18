@@ -30,6 +30,12 @@
     self.popOver = [[NSPopover alloc] init];
     self.popOver.behavior = NSPopoverBehaviorTransient;
     self.popOver.contentViewController = [[JZWallPaperMainViewController alloc] initWithNibName:@"JZWallPaperMainViewController" bundle:[NSBundle mainBundle]];
+    [[NSNotificationCenter defaultCenter] addObserver : self selector:@selector (resignKey:) name:NSWindowDidResignKeyNotification object: self.popOver.contentViewController.view.window ];
+}
+
+- (void)resignKey:(NSNotification *)notification
+{
+    [self.popOver performClose:self];
 }
 
 - (void)togglePopover:(id)sender

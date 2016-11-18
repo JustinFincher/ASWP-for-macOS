@@ -10,6 +10,7 @@
 #import "JZWallPaperCollectionHeaderView.h"
 #import "JZASDataManager.h"
 #import <QuartzCore/QuartzCore.h>
+#import "JZWallPaperManager.h"
 #import "JZWallPaperCollectionViewItem.h"
 
 @interface JZWallPaperMainViewController ()<NSCollectionViewDataSource,NSCollectionViewDelegate>
@@ -21,6 +22,7 @@
 
 @property (strong, nonatomic) NSMutableArray *dataSource;
 @property (weak) IBOutlet NSButton *refreshButton;
+@property (weak) IBOutlet NSButton *settingsButton;
 
 @end
 
@@ -36,7 +38,7 @@
     [self.wallpapersScrollView.layer setBackgroundColor:[NSColor clearColor].CGColor];
     self.wallpapersCollectionView.wantsLayer = YES;
     self.wallpapersCollectionView.backgroundColors = @[[NSColor clearColor]];
-//    [self.wallpapersCollectionView.layer setBackgroundColor:[NSColor clearColor].CGColor];
+
     
     
     [self.wallpapersCollectionView registerClass:[JZWallPaperCollectionViewItem class] forItemWithIdentifier:@"JZWallPaperCollectionViewItem"];
@@ -62,6 +64,7 @@
     } failure:^(NSError *error){}];
 }
 
+
 - (void)setDataSource:(NSMutableArray *)dataSource
 {
     if (self.dataSource.count > 0)
@@ -72,6 +75,26 @@
     [self.wallpapersCollectionView reloadData];
     [self.wallpapersCollectionView setNeedsDisplay:YES];
 
+}
+- (IBAction)settingsButtonPressed:(id)sender
+{
+    NSMenu *settingsMenu = [[NSMenu alloc] initWithTitle:@"Settings"];
+    
+    NSMenuItem *deleteCacheItem = [[NSMenuItem alloc] initWithTitle:@"Clear Cache" action:@selector(clearCache:) keyEquivalent:@""];
+    NSMenuItem *aboutItem = [[NSMenuItem alloc] initWithTitle:@"About App" action:@selector(aboutApp:) keyEquivalent:@""];
+    NSMenuItem *feedBackItem = [[NSMenuItem alloc] initWithTitle:@"Feedback" action:@selector(goMyBlog:) keyEquivalent:@""];
+    NSMenuItem *quitItem = [[NSMenuItem alloc] initWithTitle:@"Quit" action:@selector(quit:) keyEquivalent:@""];
+    
+    [settingsMenu addItem:deleteCacheItem];
+    [settingsMenu addItem:[NSMenuItem separatorItem]];
+    [settingsMenu addItem:feedBackItem];
+    [settingsMenu addItem:aboutItem];
+    [settingsMenu addItem:[NSMenuItem separatorItem]];
+    [settingsMenu addItem:quitItem];
+    [settingsMenu popUpMenuPositioningItem:[[settingsMenu itemArray] objectAtIndex:0]
+                                atLocation:CGPointMake(0, 0)
+                                    inView:sender];
+    
 }
 - (IBAction)refreshButtonPressed:(id)sender
 {
@@ -144,5 +167,34 @@
 - (NSSize)collectionView:(NSCollectionView *)collectionView layout:(NSCollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section
 {
     return NSZeroSize;
+}
+#pragma mark - Settings Actions
+- (void)clearCache:(id)sender
+{
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert setMessageText:@"Sure To Clear Cache?"];
+    [alert setInformativeText:@"You may lose current wallpaper set from this app after you re-login the system."];
+    [alert addButtonWithTitle:@"Sure"];
+    [alert addButtonWithTitle:@"Cancel"];
+    [alert setAlertStyle:NSWarningAlertStyle];
+    if ([alert runModal] == NSAlertFirstButtonReturn)
+    {
+        [[JZWallPaperManager sharedManager] clearAllCacheAndSaved];
+    }else
+    {
+        
+    }
+}
+- (void)aboutApp:(id)sender
+{
+  [[NSApplication sharedApplication] orderFrontStandardAboutPanel:sender];
+}
+- (void)goMyBlog:(id)sender
+{
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://www.justzht.com"]];
+}
+- (void)quit:(id)sender
+{
+    [NSApp performSelector:@selector(terminate:) withObject:nil afterDelay:0.0];
 }
 @end
