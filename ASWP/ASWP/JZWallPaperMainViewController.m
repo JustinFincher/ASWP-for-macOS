@@ -11,7 +11,10 @@
 #import "JZASDataManager.h"
 #import <QuartzCore/QuartzCore.h>
 #import "JZWallPaperManager.h"
+#import "JZSettingsViewController.h"
 #import "JZWallPaperCollectionViewItem.h"
+#import "JZLaunchOnLoginManager.h"
+#import "AppDelegate.h"
 
 @interface JZWallPaperMainViewController ()<NSCollectionViewDataSource,NSCollectionViewDelegate>
 @property (weak) IBOutlet NSScrollView *wallpapersScrollView;
@@ -90,11 +93,15 @@
     NSMenu *settingsMenu = [[NSMenu alloc] initWithTitle:@"Settings"];
     
     NSMenuItem *deleteCacheItem = [[NSMenuItem alloc] initWithTitle:@"Clear Cache" action:@selector(clearCache:) keyEquivalent:@""];
+    NSMenuItem *launchOnLoginItem = [[NSMenuItem alloc] initWithTitle:@"Launch On Login" action:@selector(switchLaunchOnLogin:) keyEquivalent:@""];
+    [launchOnLoginItem setState: [[JZLaunchOnLoginManager sharedManager] isLaunchOnLogin] ? NSOnState : NSOffState];
     NSMenuItem *aboutItem = [[NSMenuItem alloc] initWithTitle:@"About App" action:@selector(aboutApp:) keyEquivalent:@""];
     NSMenuItem *feedBackItem = [[NSMenuItem alloc] initWithTitle:@"Feedback" action:@selector(goMyBlog:) keyEquivalent:@""];
     NSMenuItem *quitItem = [[NSMenuItem alloc] initWithTitle:@"Quit" action:@selector(quit:) keyEquivalent:@""];
     
     [settingsMenu addItem:deleteCacheItem];
+    [settingsMenu addItem:[NSMenuItem separatorItem]];
+    [settingsMenu addItem:launchOnLoginItem];
     [settingsMenu addItem:[NSMenuItem separatorItem]];
     [settingsMenu addItem:feedBackItem];
     [settingsMenu addItem:aboutItem];
@@ -103,6 +110,7 @@
     [settingsMenu popUpMenuPositioningItem:[[settingsMenu itemArray] objectAtIndex:0]
                                 atLocation:CGPointMake(0, 0)
                                     inView:sender];
+    
     
 }
 - (IBAction)refreshButtonPressed:(id)sender
@@ -210,5 +218,26 @@
 - (void)quit:(id)sender
 {
     [NSApp performSelector:@selector(terminate:) withObject:nil afterDelay:0.0];
+}
+- (void)switchLaunchOnLogin:(id)sender
+{
+    BOOL oldState = [[JZLaunchOnLoginManager sharedManager] isLaunchOnLogin];
+    [[JZLaunchOnLoginManager sharedManager] setLaunchOnLogin:!oldState completeHandler:^(void)
+    {
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert setMessageText:[NSString stringWithFormat:@"Successfully %@ Launch On Login", (oldState ? @"Disable":@"Enable")] ];
+        [alert setInformativeText:@""];
+        [alert addButtonWithTitle:@"OK"];
+        [alert setAlertStyle:NSAlertStyleInformational];
+        [alert runModal];
+    } error:^(void)
+    {
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert setMessageText:[NSString stringWithFormat:@"Error When Try to %@ Launch On Login", (oldState ? @"Disable":@"Enable")] ];
+        [alert setInformativeText:@"Please try again, if this still occurs please re-login the system"];
+        [alert addButtonWithTitle:@"OK"];
+        [alert setAlertStyle:NSWarningAlertStyle];
+        [alert runModal];
+    }];
 }
 @end

@@ -1,8 +1,8 @@
 //
 //  AppDelegate.h
-//  ASWP
+//  ArtWallLoginHelper
 //
-//  Created by Justin Fincher on 2016/11/18.
+//  Created by Justin Fincher on 2016/11/19.
 //  Copyright © 2016年 Justin Fincher. All rights reserved.
 //
 
@@ -10,7 +10,6 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
-@property (nonatomic,strong) NSPopover *popOver;
 
 @end
 

@@ -27,9 +27,16 @@
 		0D3918DC1DDF635600CF0313 /* JZScreensModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3918DB1DDF635600CF0313 /* JZScreensModel.m */; };
 		0D3918DF1DDF79AD00CF0313 /* JZWallPaperManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3918DE1DDF79AD00CF0313 /* JZWallPaperManager.m */; };
 		0D3918E21DDF951F00CF0313 /* JZWallPaperCollectionItemQuickScreenSetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3918E11DDF951F00CF0313 /* JZWallPaperCollectionItemQuickScreenSetView.m */; };
-		0D98A29C1DE06B7B00B47DCD /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D98A29B1DE06B7B00B47DCD /* ServiceManagement.framework */; };
+		0D44C1B61DE0A2B000527BF5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D44C1B51DE0A2B000527BF5 /* AppDelegate.m */; };
+		0D44C1B91DE0A2B000527BF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D44C1B81DE0A2B000527BF5 /* main.m */; };
+		0D44C1BB1DE0A2B000527BF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D44C1BA1DE0A2B000527BF5 /* Assets.xcassets */; };
+		0D44C1BE1DE0A2B000527BF5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D44C1BC1DE0A2B000527BF5 /* MainMenu.xib */; };
+		0D44C1C31DE0A2EB00527BF5 /* ArtWallLoginHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0D44C1B21DE0A2B000527BF5 /* ArtWallLoginHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0D78B31A1DE0A8C7006EC4C2 /* JZSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D78B3181DE0A8C7006EC4C2 /* JZSettingsViewController.m */; };
+		0D78B31B1DE0A8C7006EC4C2 /* JZSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D78B3191DE0A8C7006EC4C2 /* JZSettingsViewController.xib */; };
+		0D78B31E1DE0ACC2006EC4C2 /* JZLaunchOnLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D78B31D1DE0ACC2006EC4C2 /* JZLaunchOnLoginManager.m */; };
 		0D98A2E41DE06D4D00B47DCD /* StartAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D98A2E31DE06D4D00B47DCD /* StartAtLoginController.m */; };
-		0D98A2E61DE06DE100B47DCD /* ASWPLoginHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0D98A2DD1DE06BEB00B47DCD /* ASWPLoginHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0DC6005A1DE084A200091598 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D98A29B1DE06B7B00B47DCD /* ServiceManagement.framework */; };
 		54BB17C42E196A773705E2CC /* libPods-ASWP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F197F84F0EF14E3D9C74D0 /* libPods-ASWP.a */; };
 		6CB73173FEF5EB0CEA043942 /* libPods-ASWPUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CDEC5865A49D80EFF8E315 /* libPods-ASWPUITests.a */; };
 		FECE81AF5BE77D4CCBAE2F94 /* libPods-ASWPTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E3FAF746D248EA54D66160 /* libPods-ASWPTests.a */; };
@@ -50,27 +57,6 @@
 			remoteGlobalIDString = 0D3918871DDE0E0600CF0313;
 			remoteInfo = ASWP;
 		};
-		0D98A2DC1DE06BEB00B47DCD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0D98A2D61DE06BE900B47DCD /* ASWPLoginHelper.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0D98A2A61DE06BE900B47DCD;
-			remoteInfo = ASWPLoginHelper;
-		};
-		0D98A2DE1DE06BEB00B47DCD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0D98A2D61DE06BE900B47DCD /* ASWPLoginHelper.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0D98A2B91DE06BE900B47DCD;
-			remoteInfo = ASWPLoginHelperTests;
-		};
-		0D98A2E01DE06BEB00B47DCD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0D98A2D61DE06BE900B47DCD /* ASWPLoginHelper.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0D98A2C41DE06BE900B47DCD;
-			remoteInfo = ASWPLoginHelperUITests;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -80,7 +66,7 @@
 			dstPath = Contents/Library/LoginItems;
 			dstSubfolderSpec = 1;
 			files = (
-				0D98A2E61DE06DE100B47DCD /* ASWPLoginHelper.app in CopyFiles */,
+				0D44C1C31DE0A2EB00527BF5 /* ArtWallLoginHelper.app in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,9 +112,21 @@
 		0D3918DE1DDF79AD00CF0313 /* JZWallPaperManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZWallPaperManager.m; sourceTree = "<group>"; };
 		0D3918E01DDF951F00CF0313 /* JZWallPaperCollectionItemQuickScreenSetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZWallPaperCollectionItemQuickScreenSetView.h; sourceTree = "<group>"; };
 		0D3918E11DDF951F00CF0313 /* JZWallPaperCollectionItemQuickScreenSetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZWallPaperCollectionItemQuickScreenSetView.m; sourceTree = "<group>"; };
+		0D44C1B21DE0A2B000527BF5 /* ArtWallLoginHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtWallLoginHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D44C1B41DE0A2B000527BF5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0D44C1B51DE0A2B000527BF5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0D44C1B81DE0A2B000527BF5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0D44C1BA1DE0A2B000527BF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0D44C1BD1DE0A2B000527BF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		0D44C1BF1DE0A2B000527BF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D44C1C41DE0A33200527BF5 /* ArtWallLoginHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ArtWallLoginHelper.entitlements; sourceTree = "<group>"; };
+		0D78B3171DE0A8C7006EC4C2 /* JZSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZSettingsViewController.h; sourceTree = "<group>"; };
+		0D78B3181DE0A8C7006EC4C2 /* JZSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZSettingsViewController.m; sourceTree = "<group>"; };
+		0D78B3191DE0A8C7006EC4C2 /* JZSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JZSettingsViewController.xib; sourceTree = "<group>"; };
+		0D78B31C1DE0ACC2006EC4C2 /* JZLaunchOnLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZLaunchOnLoginManager.h; sourceTree = "<group>"; };
+		0D78B31D1DE0ACC2006EC4C2 /* JZLaunchOnLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZLaunchOnLoginManager.m; sourceTree = "<group>"; };
 		0D8742C47D615CE9FC17531D /* Pods-ASWPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASWPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASWPTests/Pods-ASWPTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0D98A29B1DE06B7B00B47DCD /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
-		0D98A2D61DE06BE900B47DCD /* ASWPLoginHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ASWPLoginHelper.xcodeproj; path = ASWPLoginHelper/ASWPLoginHelper.xcodeproj; sourceTree = "<group>"; };
 		0D98A2E21DE06D4D00B47DCD /* StartAtLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartAtLoginController.h; sourceTree = "<group>"; };
 		0D98A2E31DE06D4D00B47DCD /* StartAtLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartAtLoginController.m; sourceTree = "<group>"; };
 		16D93B27203E75306598E07F /* Pods-ASWP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASWP.release.xcconfig"; path = "Pods/Target Support Files/Pods-ASWP/Pods-ASWP.release.xcconfig"; sourceTree = "<group>"; };
@@ -146,7 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D98A29C1DE06B7B00B47DCD /* ServiceManagement.framework in Frameworks */,
+				0DC6005A1DE084A200091598 /* ServiceManagement.framework in Frameworks */,
 				54BB17C42E196A773705E2CC /* libPods-ASWP.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,16 +165,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0D44C1AF1DE0A2B000527BF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		0D39187F1DDE0E0600CF0313 = {
 			isa = PBXGroup;
 			children = (
-				0D98A2D61DE06BE900B47DCD /* ASWPLoginHelper.xcodeproj */,
 				0D39188A1DDE0E0600CF0313 /* ASWP */,
 				0D39189E1DDE0E0600CF0313 /* ASWPTests */,
 				0D3918A91DDE0E0600CF0313 /* ASWPUITests */,
+				0D44C1B31DE0A2B000527BF5 /* ArtWallLoginHelper */,
 				0D3918891DDE0E0600CF0313 /* Products */,
 				FC215BE418428F21C43B594F /* Pods */,
 				70223849FE4F4794C3C90FEA /* Frameworks */,
@@ -189,6 +194,7 @@
 				0D3918881DDE0E0600CF0313 /* ArtWall.app */,
 				0D39189B1DDE0E0600CF0313 /* ArtWallTests.xctest */,
 				0D3918A61DDE0E0600CF0313 /* ArtWallUITests.xctest */,
+				0D44C1B21DE0A2B000527BF5 /* ArtWallLoginHelper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -245,6 +251,9 @@
 				0D3918C91DDE422400CF0313 /* JZWallPaperCollectionViewItem.h */,
 				0D3918CA1DDE422400CF0313 /* JZWallPaperCollectionViewItem.m */,
 				0D3918CB1DDE422400CF0313 /* JZWallPaperCollectionViewItem.xib */,
+				0D78B3171DE0A8C7006EC4C2 /* JZSettingsViewController.h */,
+				0D78B3181DE0A8C7006EC4C2 /* JZSettingsViewController.m */,
+				0D78B3191DE0A8C7006EC4C2 /* JZSettingsViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -254,6 +263,8 @@
 			children = (
 				0D98A2E21DE06D4D00B47DCD /* StartAtLoginController.h */,
 				0D98A2E31DE06D4D00B47DCD /* StartAtLoginController.m */,
+				0D78B31C1DE0ACC2006EC4C2 /* JZLaunchOnLoginManager.h */,
+				0D78B31D1DE0ACC2006EC4C2 /* JZLaunchOnLoginManager.m */,
 				0D3918C31DDE244B00CF0313 /* XMLDictionary.h */,
 				0D3918C41DDE244B00CF0313 /* XMLDictionary.m */,
 				0D3918BF1DDE23BC00CF0313 /* JZASDataManager.h */,
@@ -284,14 +295,26 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		0D98A2D71DE06BE900B47DCD /* Products */ = {
+		0D44C1B31DE0A2B000527BF5 /* ArtWallLoginHelper */ = {
 			isa = PBXGroup;
 			children = (
-				0D98A2DD1DE06BEB00B47DCD /* ASWPLoginHelper.app */,
-				0D98A2DF1DE06BEB00B47DCD /* ASWPLoginHelperTests.xctest */,
-				0D98A2E11DE06BEB00B47DCD /* ASWPLoginHelperUITests.xctest */,
+				0D44C1C41DE0A33200527BF5 /* ArtWallLoginHelper.entitlements */,
+				0D44C1B41DE0A2B000527BF5 /* AppDelegate.h */,
+				0D44C1B51DE0A2B000527BF5 /* AppDelegate.m */,
+				0D44C1BA1DE0A2B000527BF5 /* Assets.xcassets */,
+				0D44C1BC1DE0A2B000527BF5 /* MainMenu.xib */,
+				0D44C1BF1DE0A2B000527BF5 /* Info.plist */,
+				0D44C1B71DE0A2B000527BF5 /* Supporting Files */,
 			);
-			name = Products;
+			path = ArtWallLoginHelper;
+			sourceTree = "<group>";
+		};
+		0D44C1B71DE0A2B000527BF5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0D44C1B81DE0A2B000527BF5 /* main.m */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		70223849FE4F4794C3C90FEA /* Frameworks */ = {
@@ -385,6 +408,23 @@
 			productReference = 0D3918A61DDE0E0600CF0313 /* ArtWallUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		0D44C1B11DE0A2B000527BF5 /* ArtWallLoginHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D44C1C01DE0A2B000527BF5 /* Build configuration list for PBXNativeTarget "ArtWallLoginHelper" */;
+			buildPhases = (
+				0D44C1AE1DE0A2B000527BF5 /* Sources */,
+				0D44C1AF1DE0A2B000527BF5 /* Frameworks */,
+				0D44C1B01DE0A2B000527BF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ArtWallLoginHelper;
+			productName = ArtWallLoginHelper;
+			productReference = 0D44C1B21DE0A2B000527BF5 /* ArtWallLoginHelper.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -416,6 +456,16 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0D3918871DDE0E0600CF0313;
 					};
+					0D44C1B11DE0A2B000527BF5 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 9QJ8M25J77;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
 				};
 			};
 			buildConfigurationList = 0D3918831DDE0E0600CF0313 /* Build configuration list for PBXProject "ArtWall" */;
@@ -429,44 +479,15 @@
 			mainGroup = 0D39187F1DDE0E0600CF0313;
 			productRefGroup = 0D3918891DDE0E0600CF0313 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 0D98A2D71DE06BE900B47DCD /* Products */;
-					ProjectRef = 0D98A2D61DE06BE900B47DCD /* ASWPLoginHelper.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				0D3918871DDE0E0600CF0313 /* ArtWall */,
 				0D39189A1DDE0E0600CF0313 /* ArtWallTests */,
 				0D3918A51DDE0E0600CF0313 /* ArtWallUITests */,
+				0D44C1B11DE0A2B000527BF5 /* ArtWallLoginHelper */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		0D98A2DD1DE06BEB00B47DCD /* ASWPLoginHelper.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = ASWPLoginHelper.app;
-			remoteRef = 0D98A2DC1DE06BEB00B47DCD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0D98A2DF1DE06BEB00B47DCD /* ASWPLoginHelperTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ASWPLoginHelperTests.xctest;
-			remoteRef = 0D98A2DE1DE06BEB00B47DCD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0D98A2E11DE06BEB00B47DCD /* ASWPLoginHelperUITests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ASWPLoginHelperUITests.xctest;
-			remoteRef = 0D98A2E01DE06BEB00B47DCD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0D3918861DDE0E0600CF0313 /* Resources */ = {
@@ -478,6 +499,7 @@
 				0D3918BD1DDE0EF900CF0313 /* JZWallPaperMainViewController.xib in Resources */,
 				0D3918921DDE0E0600CF0313 /* Assets.xcassets in Resources */,
 				0D3918951DDE0E0600CF0313 /* MainMenu.xib in Resources */,
+				0D78B31B1DE0A8C7006EC4C2 /* JZSettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +514,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D44C1B01DE0A2B000527BF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D44C1BB1DE0A2B000527BF5 /* Assets.xcassets in Resources */,
+				0D44C1BE1DE0A2B000527BF5 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,12 +687,14 @@
 				0D3918CC1DDE422400CF0313 /* JZWallPaperCollectionViewItem.m in Sources */,
 				0D3918DC1DDF635600CF0313 /* JZScreensModel.m in Sources */,
 				0D3918D61DDF2E3E00CF0313 /* JZWallPaperCollectionHeaderView.m in Sources */,
+				0D78B31E1DE0ACC2006EC4C2 /* JZLaunchOnLoginManager.m in Sources */,
 				0D3918C51DDE244B00CF0313 /* XMLDictionary.m in Sources */,
 				0D3918901DDE0E0600CF0313 /* main.m in Sources */,
 				0D3918C81DDE35CD00CF0313 /* JZASArtworkModel.m in Sources */,
 				0D3918D91DDF3E0C00CF0313 /* JZScreensManager.m in Sources */,
 				0D98A2E41DE06D4D00B47DCD /* StartAtLoginController.m in Sources */,
 				0D3918D11DDEE15A00CF0313 /* JZWallPaperCollectionItemView.m in Sources */,
+				0D78B31A1DE0A8C7006EC4C2 /* JZSettingsViewController.m in Sources */,
 				0D3918C11DDE23BC00CF0313 /* JZASDataManager.m in Sources */,
 				0D39188D1DDE0E0600CF0313 /* AppDelegate.m in Sources */,
 				0D3918DF1DDF79AD00CF0313 /* JZWallPaperManager.m in Sources */,
@@ -686,6 +719,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0D44C1AE1DE0A2B000527BF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D44C1B91DE0A2B000527BF5 /* main.m in Sources */,
+				0D44C1B61DE0A2B000527BF5 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -706,6 +748,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				0D3918941DDE0E0600CF0313 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		0D44C1BC1DE0A2B000527BF5 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0D44C1BD1DE0A2B000527BF5 /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -894,6 +944,40 @@
 			};
 			name = Release;
 		};
+		0D44C1C11DE0A2B000527BF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ArtWallLoginHelper/ArtWallLoginHelper.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9QJ8M25J77;
+				INFOPLIST_FILE = ArtWallLoginHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JustZht.ArtWallLoginHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		0D44C1C21DE0A2B000527BF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ArtWallLoginHelper/ArtWallLoginHelper.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9QJ8M25J77;
+				INFOPLIST_FILE = ArtWallLoginHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JustZht.ArtWallLoginHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -929,6 +1013,15 @@
 			buildConfigurations = (
 				0D3918B61DDE0E0600CF0313 /* Debug */,
 				0D3918B71DDE0E0600CF0313 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0D44C1C01DE0A2B000527BF5 /* Build configuration list for PBXNativeTarget "ArtWallLoginHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D44C1C11DE0A2B000527BF5 /* Debug */,
+				0D44C1C21DE0A2B000527BF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

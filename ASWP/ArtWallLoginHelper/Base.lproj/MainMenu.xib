@@ -16,11 +16,11 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
-                <menuItem title="ASWPLoginHelper" id="1Xt-HY-uBw">
+                <menuItem title="ArtWallLoginHelper" id="1Xt-HY-uBw">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="ASWPLoginHelper" systemMenu="apple" id="uQy-DD-JDr">
+                    <menu key="submenu" title="ArtWallLoginHelper" systemMenu="apple" id="uQy-DD-JDr">
                         <items>
-                            <menuItem title="About ASWPLoginHelper" id="5kV-Vb-QxS">
+                            <menuItem title="About ArtWallLoginHelper" id="5kV-Vb-QxS">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="orderFrontStandardAboutPanel:" target="-1" id="Exp-CZ-Vem"/>
@@ -34,7 +34,7 @@
                                 <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                            <menuItem title="Hide ASWPLoginHelper" keyEquivalent="h" id="Olw-nP-bQN">
+                            <menuItem title="Hide ArtWallLoginHelper" keyEquivalent="h" id="Olw-nP-bQN">
                                 <connections>
                                     <action selector="hide:" target="-1" id="PnN-Uc-m68"/>
                                 </connections>
@@ -52,7 +52,7 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                            <menuItem title="Quit ASWPLoginHelper" keyEquivalent="q" id="4sb-4s-VLi">
+                            <menuItem title="Quit ArtWallLoginHelper" keyEquivalent="q" id="4sb-4s-VLi">
                                 <connections>
                                     <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
                                 </connections>
@@ -665,7 +665,7 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                         <items>
-                            <menuItem title="ASWPLoginHelper Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                            <menuItem title="ArtWallLoginHelper Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                 <connections>
                                     <action selector="showHelp:" target="-1" id="y7X-2Q-9no"/>
                                 </connections>

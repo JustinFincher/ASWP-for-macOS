@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0D98A2A51DE06BE900B47DCD"
-               BuildableName = "ASWPLoginHelper.app"
-               BlueprintName = "ASWPLoginHelper"
-               ReferencedContainer = "container:ASWPLoginHelper.xcodeproj">
+               BlueprintIdentifier = "734C379315414CE200994189"
+               BuildableName = "LaunchAtLoginHelper.app"
+               BlueprintName = "LaunchAtLoginHelper"
+               ReferencedContainer = "container:LaunchAtLoginHelper.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,34 +28,14 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0D98A2B81DE06BE900B47DCD"
-               BuildableName = "ASWPLoginHelperTests.xctest"
-               BlueprintName = "ASWPLoginHelperTests"
-               ReferencedContainer = "container:ASWPLoginHelper.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0D98A2C31DE06BE900B47DCD"
-               BuildableName = "ASWPLoginHelperUITests.xctest"
-               BlueprintName = "ASWPLoginHelperUITests"
-               ReferencedContainer = "container:ASWPLoginHelper.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0D98A2A51DE06BE900B47DCD"
-            BuildableName = "ASWPLoginHelper.app"
-            BlueprintName = "ASWPLoginHelper"
-            ReferencedContainer = "container:ASWPLoginHelper.xcodeproj">
+            BlueprintIdentifier = "734C379315414CE200994189"
+            BuildableName = "LaunchAtLoginHelper.app"
+            BlueprintName = "LaunchAtLoginHelper"
+            ReferencedContainer = "container:LaunchAtLoginHelper.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0D98A2A51DE06BE900B47DCD"
-            BuildableName = "ASWPLoginHelper.app"
-            BlueprintName = "ASWPLoginHelper"
-            ReferencedContainer = "container:ASWPLoginHelper.xcodeproj">
+            BlueprintIdentifier = "734C379315414CE200994189"
+            BuildableName = "LaunchAtLoginHelper.app"
+            BlueprintName = "LaunchAtLoginHelper"
+            ReferencedContainer = "container:LaunchAtLoginHelper.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0D98A2A51DE06BE900B47DCD"
-            BuildableName = "ASWPLoginHelper.app"
-            BlueprintName = "ASWPLoginHelper"
-            ReferencedContainer = "container:ASWPLoginHelper.xcodeproj">
+            BlueprintIdentifier = "734C379315414CE200994189"
+            BuildableName = "LaunchAtLoginHelper.app"
+            BlueprintName = "LaunchAtLoginHelper"
+            ReferencedContainer = "container:LaunchAtLoginHelper.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
