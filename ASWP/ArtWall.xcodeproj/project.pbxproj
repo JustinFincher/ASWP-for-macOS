@@ -87,17 +87,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0D3918881DDE0E0600CF0313 /* ASWP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ASWP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D3918881DDE0E0600CF0313 /* ArtWall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtWall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D39188B1DDE0E0600CF0313 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0D39188C1DDE0E0600CF0313 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0D39188F1DDE0E0600CF0313 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0D3918911DDE0E0600CF0313 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D3918941DDE0E0600CF0313 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		0D3918961DDE0E0600CF0313 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0D39189B1DDE0E0600CF0313 /* ASWPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ASWPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D39189B1DDE0E0600CF0313 /* ArtWallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtWallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D39189F1DDE0E0600CF0313 /* ASWPTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASWPTests.m; sourceTree = "<group>"; };
 		0D3918A11DDE0E0600CF0313 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0D3918A61DDE0E0600CF0313 /* ASWPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ASWPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D3918A61DDE0E0600CF0313 /* ArtWallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtWallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D3918AA1DDE0E0600CF0313 /* ASWPUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASWPUITests.m; sourceTree = "<group>"; };
 		0D3918AC1DDE0E0600CF0313 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D3918B81DDE0E0C00CF0313 /* ASWP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ASWP.entitlements; sourceTree = "<group>"; };
@@ -186,9 +186,9 @@
 		0D3918891DDE0E0600CF0313 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0D3918881DDE0E0600CF0313 /* ASWP.app */,
-				0D39189B1DDE0E0600CF0313 /* ASWPTests.xctest */,
-				0D3918A61DDE0E0600CF0313 /* ASWPUITests.xctest */,
+				0D3918881DDE0E0600CF0313 /* ArtWall.app */,
+				0D39189B1DDE0E0600CF0313 /* ArtWallTests.xctest */,
+				0D3918A61DDE0E0600CF0313 /* ArtWallUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -321,9 +321,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0D3918871DDE0E0600CF0313 /* ASWP */ = {
+		0D3918871DDE0E0600CF0313 /* ArtWall */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0D3918AF1DDE0E0600CF0313 /* Build configuration list for PBXNativeTarget "ASWP" */;
+			buildConfigurationList = 0D3918AF1DDE0E0600CF0313 /* Build configuration list for PBXNativeTarget "ArtWall" */;
 			buildPhases = (
 				E8579CFE02752D127D59AD67 /* [CP] Check Pods Manifest.lock */,
 				0D3918841DDE0E0600CF0313 /* Sources */,
@@ -338,14 +338,14 @@
 			);
 			dependencies = (
 			);
-			name = ASWP;
+			name = ArtWall;
 			productName = ASWP;
-			productReference = 0D3918881DDE0E0600CF0313 /* ASWP.app */;
+			productReference = 0D3918881DDE0E0600CF0313 /* ArtWall.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0D39189A1DDE0E0600CF0313 /* ASWPTests */ = {
+		0D39189A1DDE0E0600CF0313 /* ArtWallTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0D3918B21DDE0E0600CF0313 /* Build configuration list for PBXNativeTarget "ASWPTests" */;
+			buildConfigurationList = 0D3918B21DDE0E0600CF0313 /* Build configuration list for PBXNativeTarget "ArtWallTests" */;
 			buildPhases = (
 				582486DB64AA48B2628B64AF /* [CP] Check Pods Manifest.lock */,
 				0D3918971DDE0E0600CF0313 /* Sources */,
@@ -359,14 +359,14 @@
 			dependencies = (
 				0D39189D1DDE0E0600CF0313 /* PBXTargetDependency */,
 			);
-			name = ASWPTests;
+			name = ArtWallTests;
 			productName = ASWPTests;
-			productReference = 0D39189B1DDE0E0600CF0313 /* ASWPTests.xctest */;
+			productReference = 0D39189B1DDE0E0600CF0313 /* ArtWallTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0D3918A51DDE0E0600CF0313 /* ASWPUITests */ = {
+		0D3918A51DDE0E0600CF0313 /* ArtWallUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0D3918B51DDE0E0600CF0313 /* Build configuration list for PBXNativeTarget "ASWPUITests" */;
+			buildConfigurationList = 0D3918B51DDE0E0600CF0313 /* Build configuration list for PBXNativeTarget "ArtWallUITests" */;
 			buildPhases = (
 				A0336D8A7DD53FFA515F55AB /* [CP] Check Pods Manifest.lock */,
 				0D3918A21DDE0E0600CF0313 /* Sources */,
@@ -380,9 +380,9 @@
 			dependencies = (
 				0D3918A81DDE0E0600CF0313 /* PBXTargetDependency */,
 			);
-			name = ASWPUITests;
+			name = ArtWallUITests;
 			productName = ASWPUITests;
-			productReference = 0D3918A61DDE0E0600CF0313 /* ASWPUITests.xctest */;
+			productReference = 0D3918A61DDE0E0600CF0313 /* ArtWallUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -437,9 +437,9 @@
 			);
 			projectRoot = "";
 			targets = (
-				0D3918871DDE0E0600CF0313 /* ASWP */,
-				0D39189A1DDE0E0600CF0313 /* ASWPTests */,
-				0D3918A51DDE0E0600CF0313 /* ASWPUITests */,
+				0D3918871DDE0E0600CF0313 /* ArtWall */,
+				0D39189A1DDE0E0600CF0313 /* ArtWallTests */,
+				0D3918A51DDE0E0600CF0313 /* ArtWallUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -691,12 +691,12 @@
 /* Begin PBXTargetDependency section */
 		0D39189D1DDE0E0600CF0313 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0D3918871DDE0E0600CF0313 /* ASWP */;
+			target = 0D3918871DDE0E0600CF0313 /* ArtWall */;
 			targetProxy = 0D39189C1DDE0E0600CF0313 /* PBXContainerItemProxy */;
 		};
 		0D3918A81DDE0E0600CF0313 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0D3918871DDE0E0600CF0313 /* ASWP */;
+			target = 0D3918871DDE0E0600CF0313 /* ArtWall */;
 			targetProxy = 0D3918A71DDE0E0600CF0313 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -847,7 +847,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JustZht.ASWPTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ASWP.app/Contents/MacOS/ASWP";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArtWall.app/Contents/MacOS/ArtWall";
 			};
 			name = Debug;
 		};
@@ -862,7 +862,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JustZht.ASWPTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ASWP.app/Contents/MacOS/ASWP";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArtWall.app/Contents/MacOS/ArtWall";
 			};
 			name = Release;
 		};
@@ -906,7 +906,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0D3918AF1DDE0E0600CF0313 /* Build configuration list for PBXNativeTarget "ASWP" */ = {
+		0D3918AF1DDE0E0600CF0313 /* Build configuration list for PBXNativeTarget "ArtWall" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0D3918B01DDE0E0600CF0313 /* Debug */,
@@ -915,7 +915,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0D3918B21DDE0E0600CF0313 /* Build configuration list for PBXNativeTarget "ASWPTests" */ = {
+		0D3918B21DDE0E0600CF0313 /* Build configuration list for PBXNativeTarget "ArtWallTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0D3918B31DDE0E0600CF0313 /* Debug */,
@@ -924,7 +924,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0D3918B51DDE0E0600CF0313 /* Build configuration list for PBXNativeTarget "ASWPUITests" */ = {
+		0D3918B51DDE0E0600CF0313 /* Build configuration list for PBXNativeTarget "ArtWallUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0D3918B61DDE0E0600CF0313 /* Debug */,
