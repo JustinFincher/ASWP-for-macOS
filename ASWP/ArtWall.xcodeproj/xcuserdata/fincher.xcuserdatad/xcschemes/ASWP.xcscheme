@@ -17,7 +17,7 @@
                BlueprintIdentifier = "0D3918871DDE0E0600CF0313"
                BuildableName = "ASWP.app"
                BlueprintName = "ASWP"
-               ReferencedContainer = "container:ASWP.xcodeproj">
+               ReferencedContainer = "container:ArtWall.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "0D39189A1DDE0E0600CF0313"
                BuildableName = "ASWPTests.xctest"
                BlueprintName = "ASWPTests"
-               ReferencedContainer = "container:ASWP.xcodeproj">
+               ReferencedContainer = "container:ArtWall.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "0D3918A51DDE0E0600CF0313"
                BuildableName = "ASWPUITests.xctest"
                BlueprintName = "ASWPUITests"
-               ReferencedContainer = "container:ASWP.xcodeproj">
+               ReferencedContainer = "container:ArtWall.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,7 +55,7 @@
             BlueprintIdentifier = "0D3918871DDE0E0600CF0313"
             BuildableName = "ASWP.app"
             BlueprintName = "ASWP"
-            ReferencedContainer = "container:ASWP.xcodeproj">
+            ReferencedContainer = "container:ArtWall.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -78,7 +78,7 @@
             BlueprintIdentifier = "0D3918871DDE0E0600CF0313"
             BuildableName = "ASWP.app"
             BlueprintName = "ASWP"
-            ReferencedContainer = "container:ASWP.xcodeproj">
+            ReferencedContainer = "container:ArtWall.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -97,7 +97,7 @@
             BlueprintIdentifier = "0D3918871DDE0E0600CF0313"
             BuildableName = "ASWP.app"
             BlueprintName = "ASWP"
-            ReferencedContainer = "container:ASWP.xcodeproj">
+            ReferencedContainer = "container:ArtWall.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

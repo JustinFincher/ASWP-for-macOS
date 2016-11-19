@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface JZASArtworkModel : NSObject
+@interface JZASArtworkModel : NSObject<NSCoding>
 
 @property (nonatomic,strong) NSString *artworkTitle;
 @property (nonatomic,strong) NSString *artworkDescription;

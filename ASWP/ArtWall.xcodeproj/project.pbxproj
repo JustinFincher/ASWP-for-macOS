@@ -27,6 +27,9 @@
 		0D3918DC1DDF635600CF0313 /* JZScreensModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3918DB1DDF635600CF0313 /* JZScreensModel.m */; };
 		0D3918DF1DDF79AD00CF0313 /* JZWallPaperManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3918DE1DDF79AD00CF0313 /* JZWallPaperManager.m */; };
 		0D3918E21DDF951F00CF0313 /* JZWallPaperCollectionItemQuickScreenSetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3918E11DDF951F00CF0313 /* JZWallPaperCollectionItemQuickScreenSetView.m */; };
+		0D98A29C1DE06B7B00B47DCD /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D98A29B1DE06B7B00B47DCD /* ServiceManagement.framework */; };
+		0D98A2E41DE06D4D00B47DCD /* StartAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D98A2E31DE06D4D00B47DCD /* StartAtLoginController.m */; };
+		0D98A2E61DE06DE100B47DCD /* ASWPLoginHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0D98A2DD1DE06BEB00B47DCD /* ASWPLoginHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		54BB17C42E196A773705E2CC /* libPods-ASWP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F197F84F0EF14E3D9C74D0 /* libPods-ASWP.a */; };
 		6CB73173FEF5EB0CEA043942 /* libPods-ASWPUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CDEC5865A49D80EFF8E315 /* libPods-ASWPUITests.a */; };
 		FECE81AF5BE77D4CCBAE2F94 /* libPods-ASWPTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E3FAF746D248EA54D66160 /* libPods-ASWPTests.a */; };
@@ -47,7 +50,41 @@
 			remoteGlobalIDString = 0D3918871DDE0E0600CF0313;
 			remoteInfo = ASWP;
 		};
+		0D98A2DC1DE06BEB00B47DCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0D98A2D61DE06BE900B47DCD /* ASWPLoginHelper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0D98A2A61DE06BE900B47DCD;
+			remoteInfo = ASWPLoginHelper;
+		};
+		0D98A2DE1DE06BEB00B47DCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0D98A2D61DE06BE900B47DCD /* ASWPLoginHelper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0D98A2B91DE06BE900B47DCD;
+			remoteInfo = ASWPLoginHelperTests;
+		};
+		0D98A2E01DE06BEB00B47DCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0D98A2D61DE06BE900B47DCD /* ASWPLoginHelper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0D98A2C41DE06BE900B47DCD;
+			remoteInfo = ASWPLoginHelperUITests;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0D98A2E51DE06DC900B47DCD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				0D98A2E61DE06DE100B47DCD /* ASWPLoginHelper.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0D3918881DDE0E0600CF0313 /* ASWP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ASWP.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +127,10 @@
 		0D3918E01DDF951F00CF0313 /* JZWallPaperCollectionItemQuickScreenSetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZWallPaperCollectionItemQuickScreenSetView.h; sourceTree = "<group>"; };
 		0D3918E11DDF951F00CF0313 /* JZWallPaperCollectionItemQuickScreenSetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZWallPaperCollectionItemQuickScreenSetView.m; sourceTree = "<group>"; };
 		0D8742C47D615CE9FC17531D /* Pods-ASWPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASWPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASWPTests/Pods-ASWPTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0D98A29B1DE06B7B00B47DCD /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		0D98A2D61DE06BE900B47DCD /* ASWPLoginHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ASWPLoginHelper.xcodeproj; path = ASWPLoginHelper/ASWPLoginHelper.xcodeproj; sourceTree = "<group>"; };
+		0D98A2E21DE06D4D00B47DCD /* StartAtLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartAtLoginController.h; sourceTree = "<group>"; };
+		0D98A2E31DE06D4D00B47DCD /* StartAtLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartAtLoginController.m; sourceTree = "<group>"; };
 		16D93B27203E75306598E07F /* Pods-ASWP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASWP.release.xcconfig"; path = "Pods/Target Support Files/Pods-ASWP/Pods-ASWP.release.xcconfig"; sourceTree = "<group>"; };
 		2F31D0009AB8E1009442A3BA /* Pods-ASWP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASWP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASWP/Pods-ASWP.debug.xcconfig"; sourceTree = "<group>"; };
 		3FB3FF8153E86B817F478FF7 /* Pods-ASWPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASWPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ASWPTests/Pods-ASWPTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D98A29C1DE06B7B00B47DCD /* ServiceManagement.framework in Frameworks */,
 				54BB17C42E196A773705E2CC /* libPods-ASWP.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,6 +173,7 @@
 		0D39187F1DDE0E0600CF0313 = {
 			isa = PBXGroup;
 			children = (
+				0D98A2D61DE06BE900B47DCD /* ASWPLoginHelper.xcodeproj */,
 				0D39188A1DDE0E0600CF0313 /* ASWP */,
 				0D39189E1DDE0E0600CF0313 /* ASWPTests */,
 				0D3918A91DDE0E0600CF0313 /* ASWPUITests */,
@@ -209,6 +252,8 @@
 		0D3918C21DDE23C200CF0313 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				0D98A2E21DE06D4D00B47DCD /* StartAtLoginController.h */,
+				0D98A2E31DE06D4D00B47DCD /* StartAtLoginController.m */,
 				0D3918C31DDE244B00CF0313 /* XMLDictionary.h */,
 				0D3918C41DDE244B00CF0313 /* XMLDictionary.m */,
 				0D3918BF1DDE23BC00CF0313 /* JZASDataManager.h */,
@@ -239,9 +284,20 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		0D98A2D71DE06BE900B47DCD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0D98A2DD1DE06BEB00B47DCD /* ASWPLoginHelper.app */,
+				0D98A2DF1DE06BEB00B47DCD /* ASWPLoginHelperTests.xctest */,
+				0D98A2E11DE06BEB00B47DCD /* ASWPLoginHelperUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		70223849FE4F4794C3C90FEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0D98A29B1DE06B7B00B47DCD /* ServiceManagement.framework */,
 				94F197F84F0EF14E3D9C74D0 /* libPods-ASWP.a */,
 				46E3FAF746D248EA54D66160 /* libPods-ASWPTests.a */,
 				55CDEC5865A49D80EFF8E315 /* libPods-ASWPUITests.a */,
@@ -275,6 +331,8 @@
 				0D3918861DDE0E0600CF0313 /* Resources */,
 				54B9B4FD0022FF0A7C6C2EDD /* [CP] Embed Pods Frameworks */,
 				27D6357FFBC94DC1BC474086 /* [CP] Copy Pods Resources */,
+				0D98A29A1DE0693200B47DCD /* ShellScript */,
+				0D98A2E51DE06DC900B47DCD /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -360,7 +418,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0D3918831DDE0E0600CF0313 /* Build configuration list for PBXProject "ASWP" */;
+			buildConfigurationList = 0D3918831DDE0E0600CF0313 /* Build configuration list for PBXProject "ArtWall" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -371,6 +429,12 @@
 			mainGroup = 0D39187F1DDE0E0600CF0313;
 			productRefGroup = 0D3918891DDE0E0600CF0313 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0D98A2D71DE06BE900B47DCD /* Products */;
+					ProjectRef = 0D98A2D61DE06BE900B47DCD /* ASWPLoginHelper.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0D3918871DDE0E0600CF0313 /* ASWP */,
@@ -379,6 +443,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0D98A2DD1DE06BEB00B47DCD /* ASWPLoginHelper.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = ASWPLoginHelper.app;
+			remoteRef = 0D98A2DC1DE06BEB00B47DCD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0D98A2DF1DE06BEB00B47DCD /* ASWPLoginHelperTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ASWPLoginHelperTests.xctest;
+			remoteRef = 0D98A2DE1DE06BEB00B47DCD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0D98A2E11DE06BEB00B47DCD /* ASWPLoginHelperUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ASWPLoginHelperUITests.xctest;
+			remoteRef = 0D98A2E01DE06BEB00B47DCD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0D3918861DDE0E0600CF0313 /* Resources */ = {
@@ -410,6 +498,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0D98A29A1DE0693200B47DCD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\n# xcode-build-bump.sh\n# @desc Auto-increment the build number every time the project is run.\n# @usage\n# 1. Select: your Target in Xcode\n# 2. Select: Build Phases Tab\n# 3. Select: Add Build Phase -> Add Run Script\n# 4. Paste code below in to new \"Run Script\" section\n# 5. Drag the \"Run Script\" below \"Link Binaries With Libraries\"\n# 6. Insure that your starting build number is set to a whole integer and not a float (e.g. 1, not 1.0)\n\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
+		};
 		27D6357FFBC94DC1BC474086 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -559,6 +660,7 @@
 				0D3918901DDE0E0600CF0313 /* main.m in Sources */,
 				0D3918C81DDE35CD00CF0313 /* JZASArtworkModel.m in Sources */,
 				0D3918D91DDF3E0C00CF0313 /* JZScreensManager.m in Sources */,
+				0D98A2E41DE06D4D00B47DCD /* StartAtLoginController.m in Sources */,
 				0D3918D11DDEE15A00CF0313 /* JZWallPaperCollectionItemView.m in Sources */,
 				0D3918C11DDE23BC00CF0313 /* JZASDataManager.m in Sources */,
 				0D39188D1DDE0E0600CF0313 /* AppDelegate.m in Sources */,
@@ -712,6 +814,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.JustZht.ASWP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
 			};
 			name = Debug;
 		};
@@ -729,6 +832,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.JustZht.ASWP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
 			};
 			name = Release;
 		};
@@ -793,7 +897,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0D3918831DDE0E0600CF0313 /* Build configuration list for PBXProject "ASWP" */ = {
+		0D3918831DDE0E0600CF0313 /* Build configuration list for PBXProject "ArtWall" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0D3918AD1DDE0E0600CF0313 /* Debug */,

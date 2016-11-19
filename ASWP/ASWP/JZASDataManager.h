@@ -14,6 +14,9 @@
 @interface JZASDataManager : NSObject
 
 + (id)sharedManager;
-- (void)getDataFromASWithResultSuccess:(void (^)(NSMutableArray * array))finishBlock
-                               failure:(void (^)(NSError * error))errorBlock;
+
+- (void)getDataFromASWithDirectCache:(BOOL)directCache
+                       ResultSuccess:(void (^)(NSMutableArray * array))finishBlock
+                             failure:(void (^)(NSError * error))errorBlock;
+
 @end

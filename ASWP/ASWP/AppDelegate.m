@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "JZWallPaperMainViewController.h"
+#import "StartAtLoginController.h"
 
 @interface AppDelegate ()
 
@@ -31,6 +32,11 @@
     self.popOver.behavior = NSPopoverBehaviorTransient;
     self.popOver.contentViewController = [[JZWallPaperMainViewController alloc] initWithNibName:@"JZWallPaperMainViewController" bundle:[NSBundle mainBundle]];
     [[NSNotificationCenter defaultCenter] addObserver : self selector:@selector (resignKey:) name:NSWindowDidResignKeyNotification object: self.popOver.contentViewController.view.window ];
+    
+    StartAtLoginController *loginController = [[StartAtLoginController alloc] initWithIdentifier:@"com.JustZht.ASWPLoginHelper"];
+    loginController.startAtLogin = YES; // adds the entry into LaunchServices and activates it
+    loginController.enabled = YES; // disables the entry on the services list
+    BOOL startsAtLogin = [loginController startAtLogin]; // gets the current enabled state
 }
 
 - (void)resignKey:(NSNotification *)notification

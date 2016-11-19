@@ -58,10 +58,19 @@
     
     self.refreshButton.wantsLayer = YES;
     
-    [[JZASDataManager sharedManager] getDataFromASWithResultSuccess:^(NSMutableArray *array)
+    [[JZASDataManager sharedManager] getDataFromASWithDirectCache:YES ResultSuccess:^(NSMutableArray *array)
     {
         [self setDataSource:array];
-    } failure:^(NSError *error){}];
+    } failure:^(NSError *error)
+    {
+        [[JZASDataManager sharedManager] getDataFromASWithDirectCache:NO ResultSuccess:^(NSMutableArray *array)
+         {
+             [self setDataSource:array];
+         } failure:^(NSError *error)
+         {
+             
+         }];
+    }];
 }
 
 
@@ -104,7 +113,7 @@
     [[self.wallpapersCollectionView animator] setAlphaValue:0];
     [[NSAnimationContext currentContext] setCompletionHandler:^
     {
-        [[JZASDataManager sharedManager] getDataFromASWithResultSuccess:^(NSMutableArray *array)
+        [[JZASDataManager sharedManager] getDataFromASWithDirectCache:NO ResultSuccess:^(NSMutableArray *array)
          {
              [self setDataSource:array];
              self.refreshButton.enabled = YES;
@@ -114,16 +123,21 @@
              [NSAnimationContext endGrouping];
          } failure:^(NSError *error)
          {
-             self.refreshButton.enabled = YES;
-             [NSAnimationContext beginGrouping];
-             [[NSAnimationContext currentContext] setDuration:0.3];
-             [[self.wallpapersCollectionView animator] setAlphaValue:1];
-             [NSAnimationContext endGrouping];
+             [[JZASDataManager sharedManager] getDataFromASWithDirectCache:YES ResultSuccess:^(NSMutableArray *array)
+              {
+                  [self setDataSource:array];
+                  self.refreshButton.enabled = YES;
+                  [NSAnimationContext beginGrouping];
+                  [[NSAnimationContext currentContext] setDuration:0.3];
+                  [[self.wallpapersCollectionView animator] setAlphaValue:1];
+                  [NSAnimationContext endGrouping];
+              } failure:^(NSError *error)
+              {
+                  
+              }];
          }];
     }];
     [NSAnimationContext endGrouping];
-    
-
 }
 
 #pragma mark - NSCollectionViewDataSource
