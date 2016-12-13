@@ -50,7 +50,7 @@
     self.wallpapersCollectionView.dataSource = self;
     self.flowLayout = [[NSCollectionViewFlowLayout alloc] init];
     self.flowLayout.sectionInset = NSEdgeInsetsZero;
-    self.flowLayout.estimatedItemSize = CGSizeMake(self.view.frame.size.width / 3, self.view.frame.size.width / 3);
+    self.flowLayout.estimatedItemSize = CGSizeMake(self.view.frame.size.width / 3 - 0.1, self.view.frame.size.width / 3 - 0.1);
     
     self.flowLayout.minimumInteritemSpacing = 0.0f;
     self.flowLayout.minimumLineSpacing = 0.0f;
@@ -93,7 +93,7 @@
     NSMenu *settingsMenu = [[NSMenu alloc] initWithTitle:@"Settings"];
     
     NSMenuItem *deleteCacheItem = [[NSMenuItem alloc] initWithTitle:@"Clear Cache" action:@selector(clearCache:) keyEquivalent:@""];
-    NSMenuItem *launchOnLoginItem = [[NSMenuItem alloc] initWithTitle:@"Launch On Login" action:@selector(switchLaunchOnLogin:) keyEquivalent:@""];
+    NSMenuItem *launchOnLoginItem = [[NSMenuItem alloc] initWithTitle:@"Launch At Login" action:@selector(switchLaunchOnLogin:) keyEquivalent:@""];
     [launchOnLoginItem setState: [[JZLaunchOnLoginManager sharedManager] isLaunchOnLogin] ? NSOnState : NSOffState];
     NSMenuItem *aboutItem = [[NSMenuItem alloc] initWithTitle:@"About App" action:@selector(aboutApp:) keyEquivalent:@""];
     NSMenuItem *feedBackItem = [[NSMenuItem alloc] initWithTitle:@"Feedback" action:@selector(goMyBlog:) keyEquivalent:@""];
@@ -225,7 +225,7 @@
     [[JZLaunchOnLoginManager sharedManager] setLaunchOnLogin:!oldState completeHandler:^(void)
     {
         NSAlert *alert = [[NSAlert alloc] init];
-        [alert setMessageText:[NSString stringWithFormat:@"Successfully %@ Launch On Login", (oldState ? @"Disable":@"Enable")] ];
+        [alert setMessageText:[NSString stringWithFormat:@"Successfully %@ Launch At Login", (oldState ? @"Disable":@"Enable")] ];
         [alert setInformativeText:@""];
         [alert addButtonWithTitle:@"OK"];
         [alert setAlertStyle:NSAlertStyleInformational];
@@ -233,7 +233,7 @@
     } error:^(void)
     {
         NSAlert *alert = [[NSAlert alloc] init];
-        [alert setMessageText:[NSString stringWithFormat:@"Error When Try to %@ Launch On Login", (oldState ? @"Disable":@"Enable")] ];
+        [alert setMessageText:[NSString stringWithFormat:@"Error When Try to %@ Launch At Login", (oldState ? @"Disable":@"Enable")] ];
         [alert setInformativeText:@"Please try again, if this still occurs please re-login the system"];
         [alert addButtonWithTitle:@"OK"];
         [alert setAlertStyle:NSWarningAlertStyle];

@@ -37,8 +37,10 @@
 		0D78B31E1DE0ACC2006EC4C2 /* JZLaunchOnLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D78B31D1DE0ACC2006EC4C2 /* JZLaunchOnLoginManager.m */; };
 		0D98A2E41DE06D4D00B47DCD /* StartAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D98A2E31DE06D4D00B47DCD /* StartAtLoginController.m */; };
 		0DC6005A1DE084A200091598 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D98A29B1DE06B7B00B47DCD /* ServiceManagement.framework */; };
-		54BB17C42E196A773705E2CC /* libPods-ASWP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F197F84F0EF14E3D9C74D0 /* libPods-ASWP.a */; };
+		2DFE6ECED4653E3736F1686D /* libPods-ArtWall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BB3A5A06C082754D535508A /* libPods-ArtWall.a */; };
+		36B99C817A9E64E64D707C75 /* libPods-ArtWallUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F262CBD00AA67CE9EEAA36 /* libPods-ArtWallUITests.a */; };
 		6CB73173FEF5EB0CEA043942 /* libPods-ASWPUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CDEC5865A49D80EFF8E315 /* libPods-ASWPUITests.a */; };
+		CB748A8E38415CA872889BAC /* libPods-ArtWallTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 512A7F5303DE235C43F2F72E /* libPods-ArtWallTests.a */; };
 		FECE81AF5BE77D4CCBAE2F94 /* libPods-ASWPTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E3FAF746D248EA54D66160 /* libPods-ASWPTests.a */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +75,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0BB3A5A06C082754D535508A /* libPods-ArtWall.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ArtWall.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D3918881DDE0E0600CF0313 /* ArtWall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtWall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D39188B1DDE0E0600CF0313 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0D39188C1DDE0E0600CF0313 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -125,6 +128,7 @@
 		0D78B3191DE0A8C7006EC4C2 /* JZSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JZSettingsViewController.xib; sourceTree = "<group>"; };
 		0D78B31C1DE0ACC2006EC4C2 /* JZLaunchOnLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZLaunchOnLoginManager.h; sourceTree = "<group>"; };
 		0D78B31D1DE0ACC2006EC4C2 /* JZLaunchOnLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZLaunchOnLoginManager.m; sourceTree = "<group>"; };
+		0D79DE83AF62B2D8A7DB7BA4 /* Pods-ArtWallUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtWallUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArtWallUITests/Pods-ArtWallUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		0D8742C47D615CE9FC17531D /* Pods-ASWPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASWPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASWPTests/Pods-ASWPTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0D98A29B1DE06B7B00B47DCD /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		0D98A2E21DE06D4D00B47DCD /* StartAtLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartAtLoginController.h; sourceTree = "<group>"; };
@@ -133,10 +137,17 @@
 		2F31D0009AB8E1009442A3BA /* Pods-ASWP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASWP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASWP/Pods-ASWP.debug.xcconfig"; sourceTree = "<group>"; };
 		3FB3FF8153E86B817F478FF7 /* Pods-ASWPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASWPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ASWPTests/Pods-ASWPTests.release.xcconfig"; sourceTree = "<group>"; };
 		46E3FAF746D248EA54D66160 /* libPods-ASWPTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ASWPTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		512A7F5303DE235C43F2F72E /* libPods-ArtWallTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ArtWallTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55CDEC5865A49D80EFF8E315 /* libPods-ASWPUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ASWPUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		659AA4B634094CFCBB28A64D /* Pods-ASWPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASWPUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ASWPUITests/Pods-ASWPUITests.release.xcconfig"; sourceTree = "<group>"; };
 		94F197F84F0EF14E3D9C74D0 /* libPods-ASWP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ASWP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99F262CBD00AA67CE9EEAA36 /* libPods-ArtWallUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ArtWallUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D42D557AC808502055816AB /* Pods-ArtWall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtWall.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArtWall/Pods-ArtWall.debug.xcconfig"; sourceTree = "<group>"; };
+		ABE8769FDDF7C01CBDD15502 /* Pods-ArtWallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtWallTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArtWallTests/Pods-ArtWallTests.release.xcconfig"; sourceTree = "<group>"; };
+		B82189979598417FE5534D5F /* Pods-ArtWallUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtWallUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArtWallUITests/Pods-ArtWallUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BCA44BCAF79B76311739FF04 /* Pods-ASWPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASWPUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASWPUITests/Pods-ASWPUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DD5E7592D323DC7DE9ED4395 /* Pods-ArtWall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtWall.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArtWall/Pods-ArtWall.release.xcconfig"; sourceTree = "<group>"; };
+		F2C0C5859BF57E4A7E995830 /* Pods-ArtWallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtWallTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArtWallTests/Pods-ArtWallTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,7 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DC6005A1DE084A200091598 /* ServiceManagement.framework in Frameworks */,
-				54BB17C42E196A773705E2CC /* libPods-ASWP.a in Frameworks */,
+				2DFE6ECED4653E3736F1686D /* libPods-ArtWall.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FECE81AF5BE77D4CCBAE2F94 /* libPods-ASWPTests.a in Frameworks */,
+				CB748A8E38415CA872889BAC /* libPods-ArtWallTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CB73173FEF5EB0CEA043942 /* libPods-ASWPUITests.a in Frameworks */,
+				36B99C817A9E64E64D707C75 /* libPods-ArtWallUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +337,9 @@
 				94F197F84F0EF14E3D9C74D0 /* libPods-ASWP.a */,
 				46E3FAF746D248EA54D66160 /* libPods-ASWPTests.a */,
 				55CDEC5865A49D80EFF8E315 /* libPods-ASWPUITests.a */,
+				0BB3A5A06C082754D535508A /* libPods-ArtWall.a */,
+				512A7F5303DE235C43F2F72E /* libPods-ArtWallTests.a */,
+				99F262CBD00AA67CE9EEAA36 /* libPods-ArtWallUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -337,6 +353,12 @@
 				3FB3FF8153E86B817F478FF7 /* Pods-ASWPTests.release.xcconfig */,
 				BCA44BCAF79B76311739FF04 /* Pods-ASWPUITests.debug.xcconfig */,
 				659AA4B634094CFCBB28A64D /* Pods-ASWPUITests.release.xcconfig */,
+				9D42D557AC808502055816AB /* Pods-ArtWall.debug.xcconfig */,
+				DD5E7592D323DC7DE9ED4395 /* Pods-ArtWall.release.xcconfig */,
+				F2C0C5859BF57E4A7E995830 /* Pods-ArtWallTests.debug.xcconfig */,
+				ABE8769FDDF7C01CBDD15502 /* Pods-ArtWallTests.release.xcconfig */,
+				0D79DE83AF62B2D8A7DB7BA4 /* Pods-ArtWallUITests.debug.xcconfig */,
+				B82189979598417FE5534D5F /* Pods-ArtWallUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -356,6 +378,7 @@
 				27D6357FFBC94DC1BC474086 /* [CP] Copy Pods Resources */,
 				0D98A29A1DE0693200B47DCD /* ShellScript */,
 				0D98A2E51DE06DC900B47DCD /* CopyFiles */,
+				0D2B7F2E1DFF82E900737858 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -529,6 +552,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0D2B7F2E1DFF82E900737858 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FILE=\"${SRCROOT}/HockeySDK-Mac/BuildAgent\"\nif [ -f \"$FILE\" ]; then\n\"$FILE\"\nfi";
+		};
 		0D98A29A1DE0693200B47DCD /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -554,7 +590,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ASWP/Pods-ASWP-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArtWall/Pods-ArtWall-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		54B9B4FD0022FF0A7C6C2EDD /* [CP] Embed Pods Frameworks */ = {
@@ -569,7 +605,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ASWP/Pods-ASWP-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArtWall/Pods-ArtWall-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		582486DB64AA48B2628B64AF /* [CP] Check Pods Manifest.lock */ = {
@@ -599,7 +635,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ASWPUITests/Pods-ASWPUITests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArtWallUITests/Pods-ArtWallUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8C8AB0D6A163637F6B890A91 /* [CP] Copy Pods Resources */ = {
@@ -614,7 +650,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ASWPTests/Pods-ASWPTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArtWallTests/Pods-ArtWallTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		905525C4AECFAFC6B9050574 /* [CP] Embed Pods Frameworks */ = {
@@ -629,7 +665,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ASWPTests/Pods-ASWPTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArtWallTests/Pods-ArtWallTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A0336D8A7DD53FFA515F55AB /* [CP] Check Pods Manifest.lock */ = {
@@ -674,7 +710,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ASWPUITests/Pods-ASWPUITests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArtWallUITests/Pods-ArtWallUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -806,6 +842,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = ArtWall;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -846,13 +883,14 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ArtWall;
 				SDKROOT = macosx;
 			};
 			name = Release;
 		};
 		0D3918B01DDE0E0600CF0313 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F31D0009AB8E1009442A3BA /* Pods-ASWP.debug.xcconfig */;
+			baseConfigurationReference = 9D42D557AC808502055816AB /* Pods-ArtWall.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ASWP/ASWP.entitlements;
@@ -870,7 +908,7 @@
 		};
 		0D3918B11DDE0E0600CF0313 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16D93B27203E75306598E07F /* Pods-ASWP.release.xcconfig */;
+			baseConfigurationReference = DD5E7592D323DC7DE9ED4395 /* Pods-ArtWall.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ASWP/ASWP.entitlements;
@@ -888,7 +926,7 @@
 		};
 		0D3918B31DDE0E0600CF0313 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D8742C47D615CE9FC17531D /* Pods-ASWPTests.debug.xcconfig */;
+			baseConfigurationReference = F2C0C5859BF57E4A7E995830 /* Pods-ArtWallTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -903,7 +941,7 @@
 		};
 		0D3918B41DDE0E0600CF0313 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3FB3FF8153E86B817F478FF7 /* Pods-ASWPTests.release.xcconfig */;
+			baseConfigurationReference = ABE8769FDDF7C01CBDD15502 /* Pods-ArtWallTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -918,7 +956,7 @@
 		};
 		0D3918B61DDE0E0600CF0313 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BCA44BCAF79B76311739FF04 /* Pods-ASWPUITests.debug.xcconfig */;
+			baseConfigurationReference = 0D79DE83AF62B2D8A7DB7BA4 /* Pods-ArtWallUITests.debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9QJ8M25J77;
@@ -932,7 +970,7 @@
 		};
 		0D3918B71DDE0E0600CF0313 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 659AA4B634094CFCBB28A64D /* Pods-ASWPUITests.release.xcconfig */;
+			baseConfigurationReference = B82189979598417FE5534D5F /* Pods-ArtWallUITests.release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9QJ8M25J77;

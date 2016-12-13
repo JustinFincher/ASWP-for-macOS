@@ -98,6 +98,10 @@
 - (void)aspectFillWithImage:(NSImage *)image
 {
     NSSize imageSize = image.size;
+    if (imageSize.height == 0 || imageSize.width == 0)
+    {
+        imageSize = NSMakeSize(100, 100);
+    }
     float imageRatio = imageSize.width / imageSize.height;
     float containerRatio = self.imageContainerView.frame.size.width / self.imageContainerView.frame.size.height;
     

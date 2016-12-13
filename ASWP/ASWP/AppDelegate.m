@@ -10,6 +10,7 @@
 #import "JZWallPaperMainViewController.h"
 #import "StartAtLoginController.h"
 #import <ServiceManagement/ServiceManagement.h>
+#import <HockeySDK/HockeySDK.h>
 
 @interface AppDelegate ()
 
@@ -23,6 +24,10 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"7bc790505bd142bba55522d02e2ab18a"];
+    // Do some additional configuration if needed here
+    [[BITHockeyManager sharedHockeyManager] startManager];
+
     
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:-2];
     NSStatusBarButton *itemButton = self.statusItem.button;
@@ -56,6 +61,7 @@
 }
 - (void)closePopover:(id)sender
 {
+    [[NSApplication sharedApplication] activateIgnoringOtherApps:NO];
     [self.popOver performClose:sender];
 }
 

@@ -18,12 +18,22 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
     
-    NSArray *pathComponents = [[[NSBundle mainBundle] bundlePath] pathComponents];
-    pathComponents = [pathComponents subarrayWithRange:NSMakeRange(0, [pathComponents count] - 4)];
-    NSString *path = [NSString pathWithComponents:pathComponents];
-    [[NSWorkspace sharedWorkspace] launchApplication:path];
-    [NSApp terminate:nil];
-    
+    BOOL alreadyRunning = NO;
+    NSArray *running = [[NSWorkspace sharedWorkspace] runningApplications];
+    for (NSRunningApplication *app in running) {
+        if ([[app bundleIdentifier] isEqualToString:@"com.JustZht.ASWP"]) {
+            alreadyRunning = YES;
+            break;
+        }
+    }
+    if (!alreadyRunning)
+    {
+        NSArray *pathComponents = [[[NSBundle mainBundle] bundlePath] pathComponents];
+        pathComponents = [pathComponents subarrayWithRange:NSMakeRange(0, [pathComponents count] - 4)];
+        NSString *path = [NSString pathWithComponents:pathComponents];
+        [[NSWorkspace sharedWorkspace] launchApplication:path];
+        [NSApp terminate:nil];
+    }
 }
 
 

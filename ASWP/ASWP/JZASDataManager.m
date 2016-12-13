@@ -36,7 +36,7 @@
         NSLocale *enUSPOSIXLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
         [self.dateFormatter setLocale:enUSPOSIXLocale];
         NSError  *error = nil;
-        NSString *pattern = @"<img alt=\"(.*?)\" src=\"(.*?)\" />";
+        NSString *pattern = @"<img src=\"(.*?)\" alt=\"(.*?)\" />";
         self.artworkUrlRegex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:&error];
     }
     return self;
@@ -84,7 +84,7 @@
                      NSArray* matches = [self.artworkUrlRegex matchesInString:contentEncoded options:0 range: NSMakeRange(0, [contentEncoded length])];
                      for (NSTextCheckingResult* match in matches)
                      {
-                         NSString *url = [contentEncoded substringWithRange:[match rangeAtIndex:2]];
+                         NSString *url = [contentEncoded substringWithRange:[match rangeAtIndex:1]];
                          JZASArtworkModel *newArtwork = [[JZASArtworkModel alloc] init];
                          newArtwork.artworkLink = [NSURL URLWithString:link];
                          newArtwork.artworkImageLink = [NSURL URLWithString:url];

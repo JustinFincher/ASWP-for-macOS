@@ -13,6 +13,7 @@ PODS:
   - AFNetworking/Security (3.1.0)
   - AFNetworking/Serialization (3.1.0)
   - DateTools (1.7.0)
+  - HockeySDK-Mac (4.1.1)
   - SDWebImage (4.0.0-beta2):
     - SDWebImage/Core (= 4.0.0-beta2)
   - SDWebImage/Core (4.0.0-beta2)
@@ -20,13 +21,15 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - DateTools
+  - HockeySDK-Mac
   - SDWebImage (= 4.0.0-beta2)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
+  HockeySDK-Mac: c19aec63894d716ad48fba9f121921e5f4f2ca39
   SDWebImage: e379f33106cf8d6766f970c0ef1c3fb609c94d78
 
-PODFILE CHECKSUM: 167846a79b306e455c5fa20848439fcf432a8843
+PODFILE CHECKSUM: fd11b02d5e1867040fb7c0160fb8feae36cf7672
 
 COCOAPODS: 1.1.1
