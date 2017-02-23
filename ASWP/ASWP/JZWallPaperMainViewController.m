@@ -31,6 +31,17 @@
 
 @implementation JZWallPaperMainViewController
 
+- (void)viewWillLayout
+{
+    [super viewWillLayout];
+    [self refreshItemSize];
+}
+- (void)refreshItemSize
+{
+    self.flowLayout.estimatedItemSize = CGSizeMake(self.wallpapersCollectionView.enclosingScrollView.documentView.frame.size.width / 3 - 0.5, self.wallpapersCollectionView.enclosingScrollView.documentView.frame.size.width / 3 - 0.5);
+    self.flowLayout.itemSize = CGSizeMake(self.wallpapersCollectionView.enclosingScrollView.documentView.frame.size.width / 3 - 0.5, self.wallpapersCollectionView.enclosingScrollView.documentView.frame.size.width / 3 - 0.5);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
@@ -50,14 +61,16 @@
     self.wallpapersCollectionView.dataSource = self;
     self.flowLayout = [[NSCollectionViewFlowLayout alloc] init];
     self.flowLayout.sectionInset = NSEdgeInsetsZero;
-    self.flowLayout.estimatedItemSize = CGSizeMake(self.view.frame.size.width / 3 - 0.1, self.view.frame.size.width / 3 - 0.1);
     
     self.flowLayout.minimumInteritemSpacing = 0.0f;
     self.flowLayout.minimumLineSpacing = 0.0f;
     self.wallpapersCollectionView.collectionViewLayout = self.flowLayout;
-    
-    [self.wallpapersScrollView setHasVerticalScroller:YES];
-    [[self.wallpapersScrollView verticalScroller] setAlphaValue:0];
+    [self refreshItemSize];
+
+    self.wallpapersScrollView.wantsLayer = YES;
+    [self.wallpapersScrollView setScrollerStyle:NSScrollerStyleOverlay];
+    [self.wallpapersScrollView setScrollerInsets:NSEdgeInsetsZero];
+    self.wallpapersScrollView.verticalScroller = nil;
     
     self.refreshButton.wantsLayer = YES;
     
@@ -96,7 +109,7 @@
     NSMenuItem *launchOnLoginItem = [[NSMenuItem alloc] initWithTitle:@"Launch At Login" action:@selector(switchLaunchOnLogin:) keyEquivalent:@""];
     [launchOnLoginItem setState: [[JZLaunchOnLoginManager sharedManager] isLaunchOnLogin] ? NSOnState : NSOffState];
     NSMenuItem *aboutItem = [[NSMenuItem alloc] initWithTitle:@"About App" action:@selector(aboutApp:) keyEquivalent:@""];
-    NSMenuItem *feedBackItem = [[NSMenuItem alloc] initWithTitle:@"Feedback" action:@selector(goMyBlog:) keyEquivalent:@""];
+    NSMenuItem *feedBackItem = [[NSMenuItem alloc] initWithTitle:@"Feedback" action:@selector(goFeedBack:) keyEquivalent:@""];
     NSMenuItem *quitItem = [[NSMenuItem alloc] initWithTitle:@"Quit" action:@selector(quit:) keyEquivalent:@""];
     
     [settingsMenu addItem:deleteCacheItem];
@@ -206,6 +219,10 @@
     {
         
     }
+}
+- (void)goFeedBack:(id)sender
+{
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://fincher.im"]];
 }
 - (void)aboutApp:(id)sender
 {

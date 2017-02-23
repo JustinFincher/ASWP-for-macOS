@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'RFOverlayScrollView Demo' target in the 'RFOverlayScrollView Demo' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

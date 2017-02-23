@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>RFOverlayScrollView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,17 +42,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>30AD059937D61381DF5AFA73348FA8FE</key>
+		<key>53C106DE4DC73EF72C6C1A1A01D0E023</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>988DF61D21D1E876B91A84C3840EE88A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B36F6D48026E14827529F787D63D61B8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D2EB8E32A579B75D2B336018212E9F20</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -63,6 +68,11 @@
 			<true/>
 		</dict>
 		<key>EEFF98C6932B9EDFF80E6E3F4AA529D4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FF99237550D4049B0A7BA5D227559CDF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

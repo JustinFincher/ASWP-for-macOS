@@ -52,7 +52,7 @@ This library provides an async image downloader with cache support. For convenie
 - Read [How is SDWebImage better than X?](https://github.com/rs/SDWebImage/wiki/How-is-SDWebImage-better-than-X%3F)
 - Try the example by downloading the project from Github or even easier using CocoaPods try `pod try SDWebImage`
 - Get to the [installation steps](https://github.com/rs/SDWebImage#installation)
-- Read the [SDWebImage 4.0 Migration Guide](https://raw.github.com/rs/SDWebImage/master/Docs/SDWebImage-4.0-Migration-guide.md) to get an idea of the changes from 3.x to 4.x
+- Read the [SDWebImage 4.0 Migration Guide](Docs/SDWebImage-4.0-Migration-guide.md) to get an idea of the changes from 3.x to 4.x
 
 ## Who Uses It
 - Find out [who uses SDWebImage](https://github.com/rs/SDWebImage/wiki/Who-Uses-SDWebImage) and add your app to the list.
@@ -81,15 +81,17 @@ Objective-C:
 ```swift
 Swift:
 
-imageView.sd_setImageWithURL(NSURL(string: "http://www.domain.com/path/to/image.jpg"), placeholderImage:UIImage(imageNamed:"placeholder.png"))
+@import SDWebImage
+
+imageView.sd_setImage(with: URL(string: "http://www.domain.com/path/to/image.jpg"), placeholderImage: UIImage(named: "placeholder.png"))
 ```
 
-- For details about how to use the library and clear examples, see [The detailed How to use](https://raw.github.com/rs/SDWebImage/master/Docs/HowToUse.md)
+- For details about how to use the library and clear examples, see [The detailed How to use](Docs/HowToUse.md)
 
 ## Animated Images (GIF) support
 
-- Starting with the 4.0 version, we relly on [FLAnimatedImage](https://github.com/Flipboard/FLAnimatedImage) to take care of our animated images. 
-- To use it, simply make sure you us `FLAnimatedImageView` instead of `UIImageView`.
+- Starting with the 4.0 version, we rely on [FLAnimatedImage](https://github.com/Flipboard/FLAnimatedImage) to take care of our animated images. 
+- To use it, simply make sure you use `FLAnimatedImageView` instead of `UIImageView`.
 - **Note**: there is a backwards compatible feature, so if you are still trying to load a GIF into a `UIImageView`, it will only show the 1st frame as a static image.
 - **Important**: FLAnimatedImage only works on the iOS platform, so for all the other platforms (OS X, tvOS, watchOS) we will fallback to the backwards compatibility feature described above 
 
@@ -119,7 +121,17 @@ If you don't control the image server you're using, you may not be able to chang
 
 ### Add a progress indicator
 
-See this category: https://github.com/JJSaccolo/UIActivityIndicator-for-SDWebImage
+Add these before you call ```sd_setImageWithURL```
+
+``` objective-c
+[imageView setShowActivityIndicatorView:YES];
+[imageView setIndicatorStyle:UIActivityIndicatorViewStyleGray];
+```
+
+``` swift
+imageView.setShowActivityIndicatorView(true)
+imageView.setIndicatorStyle(.Gray)
+```
 
 Installation
 ------------
@@ -166,7 +178,7 @@ github "rs/SDWebImage"
 ```
 
 ### Installation by cloning the repository
-- see [Manual install](https://raw.github.com/rs/SDWebImage/master/Docs/ManualInstallation.md)
+- see [Manual install](Docs/ManualInstallation.md)
 
 ### Import headers in your source files
 

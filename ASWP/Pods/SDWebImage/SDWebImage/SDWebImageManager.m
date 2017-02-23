@@ -109,7 +109,7 @@
     // Invoking this method without a completedBlock is pointless
     NSAssert(completedBlock != nil, @"If you mean to prefetch the image, use -[SDWebImagePrefetcher prefetchURLs] instead");
 
-    // Very common mistake is to send the URL using NSString object instead of NSURL. For some strange reason, XCode won't
+    // Very common mistake is to send the URL using NSString object instead of NSURL. For some strange reason, Xcode won't
     // throw any warning for this type mismatch. Here we failsafe this error by allowing URLs to be passed as NSString.
     if ([url isKindOfClass:NSString.class]) {
         url = [NSURL URLWithString:(NSString *)url];
@@ -227,9 +227,8 @@
                     [self safelyRemoveOperationFromRunning:strongOperation];
                 }
             }];
-            __weak typeof(subOperationToken)weakSubOperationToken = subOperationToken;
             operation.cancelBlock = ^{
-                [self.imageDownloader cancel:weakSubOperationToken];
+                [self.imageDownloader cancel:subOperationToken];
                 __strong __typeof(weakOperation) strongOperation = weakOperation;
                 [self safelyRemoveOperationFromRunning:strongOperation];
             };

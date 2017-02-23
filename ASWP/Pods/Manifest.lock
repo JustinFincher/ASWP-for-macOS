@@ -12,24 +12,31 @@ PODS:
   - AFNetworking/Reachability (3.1.0)
   - AFNetworking/Security (3.1.0)
   - AFNetworking/Serialization (3.1.0)
-  - DateTools (1.7.0)
-  - HockeySDK-Mac (4.1.1)
-  - SDWebImage (4.0.0-beta2):
-    - SDWebImage/Core (= 4.0.0-beta2)
-  - SDWebImage/Core (4.0.0-beta2)
+  - Crashlytics (3.8.4):
+    - Fabric (~> 1.6.3)
+  - DateTools (2.0.0)
+  - Fabric (1.6.11)
+  - RFOverlayScrollView (0.3)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - Crashlytics
   - DateTools
-  - HockeySDK-Mac
-  - SDWebImage (= 4.0.0-beta2)
+  - Fabric
+  - RFOverlayScrollView
+  - SDWebImage (~> 4.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
-  HockeySDK-Mac: c19aec63894d716ad48fba9f121921e5f4f2ca39
-  SDWebImage: e379f33106cf8d6766f970c0ef1c3fb609c94d78
+  Crashlytics: 79e236942ca1e7fc641df1feb9a275360a78ab6a
+  DateTools: 933ac9c490f21f92127cf690ccd8c397e0126caf
+  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
+  RFOverlayScrollView: 8e2b3cee771aab5b3cf4df10b0ead12d22c7d965
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: fd11b02d5e1867040fb7c0160fb8feae36cf7672
+PODFILE CHECKSUM: e80335b6c6371cfcd0f69c6e8b35dd481f6ace47
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0

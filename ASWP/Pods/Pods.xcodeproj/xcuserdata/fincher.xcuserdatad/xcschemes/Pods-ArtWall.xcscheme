@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D2EB8E32A579B75D2B336018212E9F20'
+               BlueprintIdentifier = '53C106DE4DC73EF72C6C1A1A01D0E023'
                BlueprintName = 'Pods-ArtWall'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-ArtWall.a'>
